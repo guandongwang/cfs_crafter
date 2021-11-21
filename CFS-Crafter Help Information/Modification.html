@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Modification</title>
+    <style>
+      h1 {
+        margin: 25px;
+        text-align: center;
+      }
+
+      .container {
+        padding: 10px;
+        gap: 10px;
+        display: flex;
+        justify-content: flex-start;
+        align-items: top;
+      }
+
+      .image {
+        width: 128px;
+      }
+
+      .graph {
+        width: 400px;
+      }
+
+      /*
+      .content {
+      }
+      */
+
+      img {
+        width: 128px;
+      }
+
+      figcaption {
+        font-size: small;
+      }
+
+      p.title {
+        font-weight: bold;
+      }
+
+    </style>
+  </head>
+
+  <body>
+    <a href="./Main.html">Homepage</a>
+    <h1>Modification</h1>
+    <p>The spatiotemporal attributes of CFS masks & targets have a strong influence on the strength of visual
+      suppression. <b>CFS-Crafter</b> provides the user with the ability to fine-control these aspects of the masks and
+      targets. Hence, it allows the user to tune the stimuli to best suit their experimental design. The modified
+      stimuli can be save as a
+      <i><u>CFS-Crafter-Mask</u></i> .mat file, or as a .mp4 video file/.jpg image file. (Depends on the type of the
+      original stimuli) <a href="./Preview.html">Click here for detials on previewing and saving the modified
+        stimuli.</a>
+    </p>
+
+    <h2 id="Spatial Filtering">1. Spatial Fitlering</h2>
+
+    <p>The change in pixel luminance in the spatial domain can be decomposed into sinusoidal compoents with different
+      <i><u>Spatial Frequency</u></i>. Higher spatial frequency components can be linked to drastic
+      changes in pixel luminance such as the edges, while lower spatial frequency components are usually
+      linked to solid area or area with gradual luminance change.
+    </p>
+
+    <p>In order to manipulate the spatial frequency content of the stimuli, <b>CFS-Crafter</b> will firstly apply a 2-D
+      Fast Fourier transform along the two spatial dimensions of the 4D matrix
+      (<i><u>CFS-Crafter-Mask</u></i>) or 3D matrix(for <i><u>Image</u></i>). Then by
+      applying a 2-D filter in the frequency domain and back-transform the filtered frequency-domain matrix to its
+      spatial domain, a new stimulus with updated spatial attributes is created.</p>
+
+    <p>In <b>Modification</b>, the user need to specify the <i><u>Type</u></i> &
+      <i><u>Methods</u></i> of the spatial filter they want to apply, as well as the
+      <i><u>cutoff frequency</u></i> in cycles/degree(cpd). (And for <i><u>Butterworth</u></i> filter, the
+      <i><u>order</u></i> also needs to
+      be specified.)
+    </p>
+
+    <h3>1.1. Filter Type</h3>
+
+    <p>
+      <b>CFS-Crafter</b> offer 3 different type of spatial filter: <i><u>low-pass</u></i>, <i><u>high-pass</u></i> and
+      <i><u>band-pass</u></i>.
+    </p>
+
+    <p>
+      The figures below are example of outcome of each type of spatial filtering. One frame of the original
+      <i><u>CFS-Crafter-Mask</u></i> is shown
+      in Fig.1a. <i><u>Low-pass</u></i> spatial filtering will remove the higher
+      frequency component (i.e. the edges) while preserving the lower
+      frequecny component (i.e. the gray blobs). The <i><u>High-pass</u></i>
+      filtering will preserved the edges and eliminate the lower frequency
+      component, as can be seen in Fig.1c. The <i><u>Band-pass</u></i> spatial filtering
+      will preserve the frequency component between the lower & higher
+      <i><u>cutoff frequency</u></i>, and eliminate the rest, as shown in Fig.1d.
+    </p>
+
+    <div class="container">
+      <div class="image">
+        <img src="./Images/Modification/original.png" alt="original stimuli" style="width: 128px; height: 128px" />
+        <figcaption><i>Fig.1a - Original Stimuli</i></figcaption>
+      </div>
+      <div class="image">
+        <img src="./Images/Modification/lowpass_log_gaussian.png" alt="after low-pass temporal filtering"
+          style="width: 128px; height: 128px" />
+        <figcaption>
+          <i>Fig.1b - After Low-pass Spatial Filtering</i>
+        </figcaption>
+      </div>
+      <div class="image">
+        <img src="./Images/Modification/highpass.png" alt="after low-pass temporal filtering"
+          style="width: 128px; height: 128px" />
+        <figcaption>
+          <i>Fig.1c - After High-pass Spatial Filtering</i>
+        </figcaption>
+      </div>
+      <div class="image">
+        <img src="./Images/Modification/bandpass.png" alt="after low-pass temporal filtering"
+          style="width: 128px; height: 128px" />
+        <figcaption>
+          <i>Fig.1d - After Band-pass Spatial Filtering</i>
+        </figcaption>
+      </div>
+    </div>
+
+    <h3>1.2. Filter Method</h3>
+
+    <p>
+      Different methods(algorithms) of filtering have different profiles, which will
+      lead to differences in the frequency content of modified stimuli. Fig 2
+      shows the cross-section of low-pass filters with different filtering
+      methods differs in their profile with the same cutoff frequency.
+    </p>
+
+    <div class="container">
+      <div class="graph">
+        <img src="./Images/Modification/filter_cutoff.png" alt="after low-pass temporal filtering"
+          style="width: 400px" />
+        <figcaption>
+          <i>Fig.2 - Different Type of low-pass filter with the same cutoff
+            frequency.
+          </i>
+        </figcaption>
+      </div>
+    </div>
+
+
+    <p>
+      The difference in their profile will lead to different appearances in
+      the filtered image. <i><u>Ideal Filter</u></i> preserves all frequency components
+      that are lower than the <i><u>Cutoff Frequency</u></i> and eleiminate all that are above.
+      Due to this discontinuity in the frequency domain, a ringing artefact will appear,
+      as shown in Fig 3e. <i><u>Gaussian</u></i> and
+      <i><u>Butterworth</u></i> filter does not have this artefact attribute to their smooth
+      transition, but this smooth transition does lead to loss in lower
+      frequency content(Fig.3c & Fig. 3d). <i><u> Log Gaussian Filter</u></i> introduce a smooth roll-off
+      at the <i><u>Cutoff Frequency</u></i>, which mitigates the ringing artefact, and
+      also preserves the lower frequency(Fig. 3b)
+    </p>
+
+    <div class="container">
+      <div class="image">
+        <img src="./Images/Modification/original.png" alt="original stimuli" style="width: 128px; height: 128px" />
+        <figcaption><i>Fig.3a - Original Stimuli</i></figcaption>
+      </div>
+      <div class="image">
+        <img src="./Images/Modification/lowpass_log_gaussian.png" alt="after low-pass temporal filtering"
+          style="width: 128px; height: 128px" />
+        <figcaption>
+          <i>Fig.3b - After low-pass Log Gaussian filtering</i>
+        </figcaption>
+      </div>
+      <div class="image">
+        <img src="./Images/Modification/lowpass-gaussian.png" alt="after low-pass temporal filtering"
+          style="width: 128px; height: 128px" />
+        <figcaption>
+          <i>Fig.3c - After low-pass Gaussian filtering</i>
+        </figcaption>
+      </div>
+      <div class="image">
+        <img src="./Images/Modification/lowpass_butterworth.png" alt="after low-pass temporal filtering"
+          style="width: 128px; height: 128px" />
+        <figcaption>
+          <i>Fig.3d - After low-pass Butterworth filtering</i>
+        </figcaption>
+      </div>
+
+      <div class="image">
+        <img src="./Images/Modification/lowpasss_ideal.png" alt="after low-pass temporal filtering"
+          style="width: 128px; height: 128px" />
+        <figcaption><i>Fig.3e - After low-pass ideal filtering</i></figcaption>
+      </div>
+    </div>
+
+    <h2 id="Temporal Filtering">2. Temporal Filtering</h2>
+
+    <p>The <i><u>Temporal Frequency</u></i> of a stimulus refers to the frequency of luminance change in each pixel.
+      Notice
+      this is not equivalent to <i><u>Mask Update Rate</u></i> in <b>Creation</b> or <i><u>Image Update Rate</u></i> in
+      <b>Conversion</b>. The latter two refers to the rate at which a new pattern is present, and can be seen as
+      coarsely
+      to the temporal frequency. However, for each individual pixel, their luminance might stay the same
+      or
+      trend
+      in the same direction
+      for multiple frames(low temporal frequency), or reversing direction from frame to
+      frame (high temporal Frequency). Hence, even though the manipulation of <i><u>Update Rate</u></i>
+      can shift the overall temporal content of the stimuli ot the desired direction, it cannot guarantee the
+      temporal frequency
+      across all pixels.
+
+    </p>
+
+    <p>
+      To achieve accurate control over the temporal content of the stimuli, <b>CFS-Crafter</b> will
+      apply a 1-D Fast Fourier transform along the fourth dimension of the 4D matrix and
+      then filtering out the unwanted frequency components using 1-D filters.
+    </p>
+
+    <div class="container">
+      <div class="image">
+        <img src="./Images/Modification/before_temporal_filtering.gif" alt="original stimuli"
+          style="width: 128px; height: 128px" />
+        <figcaption><i>Fig.4a - Original Stimuli</i></figcaption>
+      </div>
+      <div class="image">
+        <img src="./Images/Modification/after_termporal_filtering.gif" alt="after low-pass temporal filtering"
+          style="width: 128px; height: 128px" />
+        <figcaption>
+          <i>Fig.4b - After low-pass temporal filtering</i>
+        </figcaption>
+      </div>
+      <div class="image">
+        <img src="./Images/Modification/after_high_pass_termporal_filtering.gif" alt="after low-pass temporal filtering"
+          style="width: 128px; height: 128px" />
+        <figcaption>
+          <i>Fig.4c - After high-pass temporal filtering</i>
+        </figcaption>
+      </div>
+      <div class="image">
+        <img src="./Images/Modification/after_bandpass_termporal_filtering.gif" alt="after low-pass temporal filtering"
+          style="width: 128px; height: 128px" />
+        <figcaption>
+          <i>Fig.4d - After band-pass temporal filtering</i>
+        </figcaption>
+      </div>
+    </div>
+
+    <h2>3. Orientation Filtering</h2>
+
+    <p><i><u>Orientation Filtering</u></i>
+      is achieved by applying a directional Gaussian filter in the frequency domain.
+      Orientation of the filter decides the direction around which the gaussian will be constructed, and sigma
+      decides
+      the width of the Gaussian. In <b>CFS Crafter</b>, orientation indicates the <b>orientation of the
+        pattern</b> (which starts at vertical
+      and goes clockwise), and it is perpendicular to the orientaion of the filter, as can be seen in Fig.4b -
+      Fig.4e.
+    </p>
+
+    <div class="container">
+      <div class="image">
+        <img src="./Images/Modification/original.png" alt="original stimuli" style="width: 128px; height: 128px" />
+        <figcaption><i>Fig.4a - Original Stimuli</i></figcaption>
+      </div>
+      <div class="image">
+        <img src="./Images/Modification/ori_filter_2.png" alt="after low-pass temporal filtering"
+          style="width: 128px; height: 128px" />
+        <figcaption><i>Fig.4b - Oreintation Filter (Orientation = 20&#176, &sigma; = 20&#176)</i></figcaption>
+      </div>
+      <div class="image">
+        <img src="./Images/Modification/ori_filtered_2.png" alt="after low-pass temporal filtering"
+          style="width: 128px; height: 128px" />
+        <figcaption><i>Fig.4c - After Oreintation Filtering (Orientation = 20&#176, &sigma; = 20&#176)</i>
+        </figcaption>
+      </div>
+      <div class="image">
+        <img src="./Images/Modification/ori_filter.png" alt="after low-pass temporal filtering"
+          style="width: 128px; height: 128px" />
+        <figcaption>
+          <i>Fig.4d - Orientation Filter (Orientation = 45&#176, &sigma; = 10&#176)</i>
+        </figcaption>
+      </div>
+      <div class="image">
+        <img src="./Images/Modification/ori_filtered.png" alt="after low-pass temporal filtering"
+          style="width: 128px; height: 128px" />
+        <figcaption><i>Fig.4e - After Oreintation Filtering (Orientation = 45&#176, &sigma; = 10&#176)</i>
+        </figcaption>
+      </div>
+
+    </div>
+
+    <h2>4. Phase Scramble</h2>
+    <p>If the user wishes to preserve the spatial frequency content(i.e. the low-level spatial features), but destroy
+      the
+      structure of the stimuli, a
+      randomised <i><u>phase</u></i> can be added in the frequency domain. This is called <i><u>Phase Scramble</u></i>.
+    </p>
+
+
+    <h3>4.1 Phase Scramble Index</h3>
+
+    <p><i><u>Phase Scramble Index</u></i> should be a number between 0 and 1. The randomised phase
+      matrix (with value ranging
+      from
+      -&pi;
+      to &pi;) will be multiplied by this index before being added to the frequency matrix. The <i><u>Phase Scramble
+          Index</u></i> decides the
+      proportion of the original phase that is left
+      in the modified stimuli. As can
+      be seen in Fig.5b, when the phase scramble is set to 1, no structure from the original stimuli is left. When
+      the index is set to 0.5, there is some original structure remaining.
+    </p>
+
+    <div class="container">
+      <div class="image">
+        <img src="./Images/Modification/original.png" alt="original stimuli" style="width: 128px; height: 128px" />
+        <figcaption><i>Fig.5a - Original Stimuli</i></figcaption>
+      </div>
+      <div class="image">
+        <img src="./Images/Modification/full_freq_scramble.png" alt="after low-pass temporal filtering"
+          style="width: 128px; height: 128px" />
+        <figcaption><i>Fig.5b - Phase Scramble Index = 1</i></figcaption>
+      </div>
+      <div class="image">
+        <img src="./Images/Modification/full_freq_partial_scramble.png" alt="after low-pass temporal filtering"
+          style="width: 128px; height: 128px" />
+        <figcaption><i>Fig.5c - Phase Scramble Index = 0.5</i></figcaption>
+      </div>
+    </div>
+
+    <h3>4.2 Frequency Range</h3>
+
+    <p>
+      <i><u>Frequency Range</u></i> decides the range of frequency that will be subject to the <i><u>Phase Scramble</u>
+        process</i>. When
+      choosing
+      the <i><u>Low-pass</u></i> option,
+      the phase Scramble will only be applied to frequency components that's lower than the <i><u>Cutoff
+          Frequency</u></i>, hence as can be seen in Fig.6c, the
+      structure
+      of the higher frequency (i.e. the edges) still remains intact, while the structure of the lower frequency
+      component (i.e.
+      the grayscale blob) is scrambled. The <i><u>High-pass</u></i> option only passes the higher frequency components
+      to
+      the
+      phase scramble. Hence, the structure of the lower frequency remains unchanged. When the
+      <i><u>Band-pass</u></i> option is selected, phase scramble only applies to the frequency
+      components between the lower and higher <i><u>Cutoff
+          frequencies</u></i>,
+      which leaves the original structure in the higher and lower frequency range, as can be observed in Fig.6d, the
+      structure of the edges(i.e. high frequency) and the base colour pattern(i.e. the general shape & location of
+      dark and
+      light
+      blobs) remains the same as the original stimuli, but the frequency in-between lost
+      its structure.
+    </p>
+
+    <div class="container">
+      <div class="image">
+        <img src="./Images/Modification/original.png" alt="original stimuli" style="width: 128px; height: 128px" />
+        <figcaption> <i>Fig.6a - Original Stimuli</i>
+        </figcaption>
+      </div>
+      <div class="image">
+        <img src="./Images/Modification/low_freq_scramble.png" alt="after low-pass temporal filtering"
+          style="width: 128px; height: 128px" />
+        <figcaption><i>Fig.6b - After Low-pass Phase Scramble</i></figcaption>
+      </div>
+
+      <div class="image">
+        <img src="./Images/Modification/high_freq_scramble.png" alt="after low-pass temporal filtering"
+          style="width: 128px; height: 128px" />
+        <figcaption><i>Fig.6c - After High-pass Phase Scramble</i></figcaption>
+      </div>
+
+      <div class="image">
+        <img src="./Images/Modification/bandpass_scramble.png" alt="after low-pass temporal filtering"
+          style="width: 128px; height: 128px" />
+        <figcaption><i>Fig.6d - After Band-pass Phase Scramble</i></figcaption>
+      </div>
+    </div>
+
+    <h3>4.3 Phase scrmable, Spatial Filtering & Orientation Filtering</h3>
+
+    <p><i><u>Phase Scramble</u></i>, <i><u>Spatial Filtering</u></i> & <i><u>Oreintation Filtering</u></i> are all
+      modifications made to the spatial
+      content of the sitmuli,
+      which complicates the outcome stimuli when performing together. In <b>CFS Crafter</b>, phase scramble
+      and
+      oreintation
+      filtering are not allowed to perform together. And when spatial filtering is applied, phase scrambling
+      can only be applied to all frequency components to avoid scrambling the frequency that was filtered out.
+    </p>
+
+  </body>
+
+</html>

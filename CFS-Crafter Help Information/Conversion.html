@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Conversion</title>
+
+    <style>
+      h1 {
+        margin: 25px;
+        text-align: center;
+      }
+
+      .container {
+        padding: 10px;
+        gap: 10px;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+      }
+
+      .image {
+        width: 128px;
+      }
+
+      .arrow {
+        width: 64px;
+      }
+
+      img {
+        max-width: 100%;
+        max-height: 100%;
+      }
+
+      /*
+      .content {
+      }
+      */
+
+      img {
+        width: 128px;
+      }
+
+
+      figcaption {
+        font-size: small;
+      }
+
+      p.title {
+        font-weight: bold;
+      }
+
+    </style>
+  </head>
+
+  <body>
+    <a href="./Main.html">Homepage</a>
+    <h1>Image Conversion</h1>
+    <p>
+      The <b>Conversion</b> function allows the user to convert a series of images
+      into a <i><u>CFS-Crafter-Mask</u></i>. After which the user can then proceed to modify
+      this sequence with
+      <a href="./Modification.html">modification function</a>, or to compare
+      with other <i><u>CFS-Crafter-Mask</u></i> or <i><u>images</u></i> using the
+      <a href="./Analysis.html">analysis function</a>
+    </p>
+
+    <div class="container">
+      <div class="image">
+        <img src="./Images/Conversion/images.png" alt="Images" />
+
+        <figcaption>
+          <i>Fig.1a - Images</i>
+        </figcaption>
+      </div>
+
+      <div class="arrow"><img src="./Images/Conversion/arrow.PNG" alt=""></div>
+
+      <div class="image">
+        <img src="./Images/Conversion/image_sequence.gif" alt="Conversted Image Sequence Stimuli" />
+        <figcaption>
+          <i>Fig.1b - Converted Image Sequence Stimuli</i>
+        </figcaption>
+      </div>
+    </div>
+
+
+    <h2>1. Select Images</h2>
+
+    <p>
+      By clicking the add images button, the user can select multiple images to upload to <b>CFS-Crafter</b>. The order
+      of the image will be based on
+      the naming of the image file. Moreover, the user can delete any unwanted images
+      by checking the <i><u>selection</u></i> column and clicking the <i><u>delete selection</u></i> button.
+    </p>
+
+
+
+    <h2>2. Conversion Parameter</h2>
+    <p>
+      After selecting all the images, the user needs to input the necessary
+      parameters.
+    </p>
+
+    <h3>2.1. Stimuli Height & Stimuli Width</h3>
+    Firstly, the user needs to set the size of the output stimuli in pixels. All the images input will be resized to
+    these
+    dimensions. <b>CFS-Crafter</b> allows images of different sizes to be uploaded, but notice that resizing might
+    lead to changes in aspect ratio. Hence it is recommended to crop the images beforehand to the same aspect ratio.
+
+    <h3>2.2. Image Update Rate & Stimuli Duration</h3>
+    <p>
+      The <i><u>Image Update Rate</u></i> is the rate at which the images is updated in the
+      stimuli sequence, similar to <i><u>Mask Update Rate</u></i> in <b>Creation</b>. <a
+        href="./Creation.html#Mask Update Rate">Click here for more details.</a>
+    </p>
+    <p>After entering the image update rate, CFS crafter
+      will calculate the duration of the stimuli sequence based on it and
+      the number of images selected, which will then be shown in <i><u>stimuli duration</u></i>.</p>
+
+    <h3>2.3. RMS Contrast & Mean Luminance</h3>
+    <p>
+      Similar to creation, converison also allows the user to set the target
+      <i><u>RMS contrast</u></i> and <i><u>mean luminace</u></i> value. <a
+        href="./Creation.html#RMS Contrast & Mean Luminance">Click
+        here for
+        details.</a>
+    </p>
+  </body>
+
+</html>

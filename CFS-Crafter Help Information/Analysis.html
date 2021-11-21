@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Analysis</title>
+    <style>
+      h1 {
+        margin: 25px;
+        text-align: center;
+      }
+
+      .container {
+        padding: 10px;
+        gap: 10px;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+      }
+
+      .image {
+        width: 128px;
+      }
+
+      .graph {
+        height: 256px;
+      }
+
+      /*
+      .content {
+      }
+      */
+
+      img {
+        max-width: 100%;
+        max-height: 100%;
+      }
+
+      li {
+        font-weight: bold;
+      }
+
+      p.title {
+        font-weight: bold;
+      }
+
+    </style>
+  </head>
+
+  <body>
+    <a href="./Main.html">Homepage</a>
+    <h1>Analsysis</h1>
+    <p></p>
+    <h2>1. Select Stimuli</h2>
+
+    <p>
+      To <b>Analysis</b> function allows user to analysing and comparing different stimuli
+      (<i><u>CFS-Crafter-Mask</u></i>, <i><u>CFS-Crafter-Image</u></i>
+      or image file in the format of .png, .jpg, .jpeg & .tiff). These stimuli can be added by clicking the <b>Add
+        Stimuli</b> button.
+    </p>
+
+    <p>Notice that the selected image file will be first converted to <i><u>CFS-Crafter-Image</u></i> using the
+      <i><u>screen_info</u></i> entered in the main interface. Hence it is important to ensure the accuracy of the
+      screen
+      information.
+    </p>
+
+    <h2>2. Select Analysis to be done</h2>
+    <p>
+      The analysis in <b>CFS-Crafter</b> is divided into multiple parts. Users can select which
+      analysis is necessary to decrease the processing time. The speed of the analysis will dependent on the
+      number of stimuli, the type of stimuli (sequences or images), and the
+      type of analysis selected.
+    </p>
+
+    <h3 id="stimuli property">2.1. Basic Information</h3>
+
+    <p>
+      Basic Information includes:
+    </p>
+
+    <ul>
+      <li>Colour:</li>
+      <p>This shows whether the selected stimuli are RGB coloured or grayscale. (Images will all be
+        shown as RGB coloured)</p>
+
+      <li>Total Frames:</li>
+      <p>Number of frames</p>
+
+      <li>Entropy:</li>
+      <p>The average entropy for grayscale stimuli. Notice for RGB coloured stimuli, the stimuli are firstly converted
+        to
+        grayscale and then the entropy is calculated.</p>
+
+      <li>RMS Contrast & Mean Luminance</li>
+      RMS(Root-mean-square) Contrast and average luminance (intensity) of the stimuli. <a
+        href="./Creation.html#RMS Contrast & Mean Luminance">For
+        details
+        on
+        RMS Contrast & Mean Luminance click here.</a></p>
+      <li>Edge Density</li>
+      <p>The edge density is calculated based on the selected edge detection method and threshold. <a
+          href="./Edge_preview.html">For details
+          on
+          edge detection click here.</a></p>
+    </ul>
+
+    <h3>2.2. Frequency</h3>
+    <p>
+      Frequency analysis will provide PSD (power spectral density) plot for
+      spatial frequency and temporal frequency.
+    </p>
+
+    <h4 id="Spatial Frequency">2.2.1. Spatial Frequency</h4>
+
+    <p>For spatial frequency analysis, the PSD is calculated based on the radial average power spectral density after 2D
+      fast fourier transform. (Rgb coloured stimuli are first converted to grayscale
+      and then undergo the analysis)</p>
+
+    <h4 id="Temporal Frequency">2.2.2. Temporal Frequency</h4>
+    <p>For temporal frequency analysis, similar porcess is performed. Notice here that only
+      <i><u>CFS-Crafter-Mask</u></i> will be subjected to temporal frequency analysis, <i><u>CFS-Crafter-Image</u></i> &
+      image file will be ignored.
+    </p>
+
+    <div class="container">
+      <div class="graph">
+        <img src="./Images/Analysis/spatial_frequency.png" alt="Spatial Power Spectral Plot" />
+        <figcaption>
+          <i>Fig.1a - Spatial Power Spectral Plot</i>
+        </figcaption>
+      </div>
+      <div class="graph">
+        <img src="./Images/Analysis/temporal_frequency.png" alt="Temporal Power Spectral Plot (with images ignored)" />
+        <figcaption>
+          <i>Fig.1b - Temporal Power Spectral Plot (with images ignored)</i>
+        </figcaption>
+      </div>
+    </div>
+
+    <h3>2.3. Colour</h3>
+
+    <p>
+      Colour analysis will ignore grayscale stimuli. For rgb stimuli, the analysis consists of two parts: descriptive
+      statics and probability density plot.
+    </p>
+
+    <p>As seen in Fig. the x-axis shows each stimulus that was subject to
+      analysis. The y axis shows the value (Hue, Saturation & Value
+      respectively), and the shade of the bar at each y-value respond to the probability density of each stimuli at
+      the
+      corresponding value (the legend bar on the right of each graph
+      shows the feature corresponding to each value),
+      with a darker shade corresponding to a higher density.</p>
+
+
+    <div class="container">
+      <div class="graph">
+        <img src="./Images/Analysis/hsv_analysis.png" alt="Stimuli Created using Sonversion" />
+        <figcaption>
+          <i>Fig.2 - HSV(Hue, Saturation & Value from left to right) Probability Density Plot</i>
+        </figcaption>
+      </div>
+    </div>
+
+    <h2>3. Analysis Results</h2>
+    <p>Based on the type of analysis selected by the user, the results will be shown in a seperate interface for the
+      user
+      to
+      view.</p>
+
+    <p>The graphs can be saved by using the context menu on the graph. The user can also save the analysis results as a
+      <i><u>CFS-Crafter-Analysis-Results</u></i> .mat file. Which contains the following information for each stimulus:
+    </p>
+
+    <ul>
+      <li>basic_info:</li>
+      <p>all information included in the <b>Basic Information</b> table</p>
+
+      <li>frequency_results</li>
+      <p>frequency(x value) & PSD (y value) for Spatial & Temporal PSD plot.</p>
+
+      <li>hsv_results</li>
+      <p>hsv array for each stimuli, bin_counts, bind_edges & descriptive statistics (mean, median, mode & range) for
+        hue, saturation & value respectively. </p>
+    </ul>
+
+  </body>
+
+</html>

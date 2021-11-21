@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Edge Detection</title>
+        <style>
+            h1 {
+                margin: 25px;
+                text-align: center;
+            }
+
+            .container {
+                padding: 10px;
+                gap: 10px;
+                display: flex;
+                justify-content: flex-start;
+                align-items: top;
+                /* flex-wrap: wrap; */
+            }
+
+            .image {
+                width: 128px;
+            }
+
+            .graph {
+                width: 200px;
+            }
+
+            /*
+      .content {
+      }
+      */
+            /*()
+      img {
+        width: 128px;
+      }*/
+
+            img {
+                max-width: 100%;
+                max-height: 100%;
+            }
+
+            p.title {
+                font-weight: bold;
+            }
+
+            li {
+                font-weight: bold;
+            }
+
+        </style>
+    </head>
+
+    <body>
+        <p><a href="./Main.html">Homepage</a></p>
+        <p><a href="./Analysis.html">Back to Analysis</a></p>
+
+        <h1>Edge Detection</h1>
+        <p><i><b>CFS Crafter</b></i> uses MATLAB's Image Processing Toolbox to perform edge detection on selected
+            <i><u>CFS-Crafter-Masks</u></i>, <i><u>CFS-Crafter-Image</u></i> & image files. Here we provide the basic
+            procedure of
+            how to use the edge detection
+            in <i><b>CFS Crafter</b></i>, for details on the edge detection algorithm please refer to MATLAB's Help
+            Center.
+        </p>
+        <h2>1. Edge Density</h2>
+        <p><i><u>Edge Density</u></i> is the percentage of pixels that are identified as edges with respect to total
+            number of pixels in the image.</p>
+        <p>When creating a <i><u>CFS-Crafter-Masks</u></i> or <i><u>CFS-Crafter-Image</u></i>, <i><b>CFS
+                    Crafter</b></i></i> will perform a
+            default
+            edge detection with <i><u>canny</u></i> method and default threshold chosen by MATLAB. The average
+            <i><u>edge density</u></i> over all frames, <i><u>edge detection method</u></i> and <i><u>threshold</u></i>
+            will be
+            stored in
+            <i><u>stimuli_property</u></i>.
+
+
+        <h2>2. Edge Detection Method & Threshold</h2>
+
+        <p>Suppose the user is particularly interested in exploring different edge detection methods & thresholds, and
+            are
+            interested in the binary edge images. In that case, the user can alter the edge detection method & threshold
+            in
+            <i><b>Analysis</b></i>, and select <i><b>Preview Edges</b></i> to preview and save the edges for all
+            selected stimuli
+            and updated edge density.
+        </p>
+        <p>There's 4 methods to choose from in <i><b>CFS Crafter</b></i>:</p>
+        <ul>
+            <li>canny & approxcanny</li>
+            <p><i><u>canny</u></i> & <i><u>approxcanny</u></i> use 2 thresholds, edges are found by looking for the
+                local maxima of
+                the gradient. The edges with strength smaller than the lower threshold will be ignored, and those with
+                strength higher
+                than the higher edge will be preserved. And those with edge strength between lower & higher limits will
+                only be preserved if
+                they are connected to the strong edges.</p>
+
+            <p>When specifying the threshold, the user can input either 1 scaler as the <i>higher threshold</i> valu.
+                And in that case the lower limit will be set as <i>0.4*higher threshold</i>. Otherwise the user can
+                specify both
+                thresholds with a comma separating the two.( i.e. <i>low,high</i>)</p>
+
+            <li>Sobel</li>
+            <p>Find maximum derivative using Sobel approximateion. Edges smaller than the threshold value will be
+                ignored.</p>
+
+            <li>log</li>
+            <p>Finds edges by looking for zero-crossings after filtering I with a Laplacian of Gaussian (LoG) filter.
+                If the user specify the threshold value 0, then the output image has closed contours because it includes
+                all
+                the
+                zero-crossings in
+                the input image
+            </p>
+        </ul>
+
+        <h2>3. Edge Preview</h2>
+        <p>If the <i><b>Preview Edges</b></i> check box is selected in <i><b>Analysis</b></i>, an <i><b>Edge
+                    Preview</b></i>
+            interface will be opened after analysis. In this interface, the user is presented with the preivew (fisrt
+            frame) of the binary
+            edge image of
+            each stimulus
+            ,
+            edge detection method & threshold used, and average edge density of each stimulus. User can also save the
+            edges as a .mat file, which contains the above-mentioned edge information and the full binary edge array for
+            each stimulus.</p>
+
+    </body>
+
+</html>

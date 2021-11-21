@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Trace</title>
+    <style>
+      h1 {
+        margin: 25px;
+        text-align: center;
+      }
+
+      .container {
+        padding: 10px;
+        gap: 10px;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+      }
+
+      .image {
+        width: 256px;
+      }
+
+      .arrow {
+        width: 70px;
+        align-items: center;
+      }
+
+      .cross {
+        width: 64px;
+        align-items: center;
+      }
+
+      img {
+        max-width: 100%;
+        max-height: 100%;
+      }
+
+      figcaption {
+        font-size: small;
+      }
+
+      p.title {
+        font-weight: bold;
+      }
+
+    </style>
+  </head>
+
+  <body>
+    <p><a href="./Main.html">Homepage</a></p>
+    <p><a href="./Creation.html">Back to Creation</a></p>
+
+    <h1>Traced Pattern</h1>
+    <p>
+      <b>CFS-Crafter</b> allows users to trace up to 5 different objects/faces to create
+      a stimuli sequence. The tracing method is based on Matlab's ROI Based
+      processing.
+    </p>
+    <p>Two types of items were supported here: <i><u>Face & Objects.</u></i> </p>
+    <h2>1. Face</h2>
+
+    <p>
+      <i><u>Face</u></i> tracing uses an <i><u>Elliptical ROI</u></i> which allows the users to select
+      the face from the provided source image.
+    </p>
+
+    <p>
+      <i><u>Mean Luminance</u></i> of all patches traced
+      will be adjusted to 4
+      different levels (0.2, 0.4, 0.6, 0.8), and the <i><u>Maximum Dimension of each patch</u></i>
+      will be adjusted to 6 different level (16%, 20%, 24%, 28%,
+      32%, 36%) of the <i><u>Maximum Dimension of the stimuli</u></i>.
+    </p>
+
+
+    <div class="container">
+      <div class="image">
+
+        <img src="./Images/Creation/traced_items/face_tracing.PNG" alt="Elliptical ROI on source image of a face" />
+        <figcaption>
+          <i>Fig.1a - Elliptical ROI</i>
+        </figcaption>
+
+      </div>
+      <div class="arrow">
+        <img src="./Images/Creation/traced_items/arrow.PNG" alt="arrow" />
+      </div>
+      <div class="image">
+        <img src="./Images/Creation/traced_items/face_patches.PNG" alt="Traced face patterns" />
+        <figcaption>
+          <i>Fig.1b - Traced face patterns</i>
+        </figcaption>
+      </div>
+      <div class="arrow">
+        <img src="./Images/Creation/traced_items/cross.PNG" alt="arrow" />
+      </div>
+      <div class="image">
+        <img src="./Images/Creation/traced_items/mean_lum_&_dim.png" alt="Mean luminance Levels & Sizes" />
+        <figcaption>
+          <i>Fig.1c - Mean luminance Levels & Sizes</i>
+        </figcaption>
+      </div>
+      <div class="arrow">
+        <img src="./Images/Creation/traced_items/arrow.PNG" alt="arrow" />
+      </div>
+      <div class="image">
+        <img src="./Images/Creation/traced_items/face.gif" alt="Traced Face Patterend Mondrian Mask" />
+        <figcaption>
+          <i>Fig.1d - Traced Face Patterend Mondrian Mask</i>
+        </figcaption>
+      </div>
+    </div>
+
+    <h2>2. Object</h2>
+
+    <p>
+      <i><u>Obejct Tracing</u></i> is very similar to face tracing, except a <i><u>Assisted
+          freehand ROI</u></i> was used to trace the edges of the object. In addition to the
+      previously mentioned adjustment in terms of size and mean luminance
+      level, the patches are also rotated to 8 different <i><u>Orientations</u></i>(0&#176, 45&#176, 90&#176,
+      135&#176,180&#176,
+      225&#176, 270&#176, 315&#176).
+    </p>
+
+
+    <div class="container">
+      <div class="image">
+        <img src="./Images/Creation/traced_items/object_tracing.PNG"
+          alt="Assisted-freehand ROI on source image of an apple" />
+        <i>Fig.2a - Assisted-freehand ROI</i>
+      </div>
+      <div class="arrow">
+        <img src="./Images/Creation/traced_items/arrow.PNG" alt="arrow" />
+      </div>
+      <div class="image">
+        <img src="./Images/Creation/traced_items/object_patches.PNG" alt="Traced object patterns" />
+        <figcaption>
+          <i>Fig.2b - Traced object patterns</i>
+        </figcaption>
+      </div>
+
+      <div class="arrow">
+        <img src="./Images/Creation/traced_items/cross.PNG" alt="arrow" />
+      </div>
+      <div class="image">
+        <img src="./Images/Creation/traced_items/orientation.png" alt="Mean luminance Levels, Sizes & Orienatations " />
+        <figcaption>
+          <i>Fig.2c - Mean luminance Levels, Sizes & Orienatations</i>
+        </figcaption>
+      </div>
+      <div class="arrow">
+        <img src="./Images/Creation/traced_items/arrow.PNG" alt="arrow" />
+      </div>
+      <div class="image">
+        <img src="./Images/Creation/traced_items/object.gif" alt="Traced Object Patterend Mondrian Mask" />
+        <figcaption>
+          <i>Fig.2d - Traced Object Patterend Mondrian Mask</i>
+        </figcaption>
+      </div>
+    </div>
+
+    <p>When drawing the assisted-freehand ROI, the outline might not be exactly as desired. Users can right-click on
+      the ROI edges to add <i><u>waypoints</u></i>, and then by dragging these waypoints the overall shape as well as
+      details
+      of
+      the
+      ROI can be adjusted.</p>
+
+    <div class="container">
+      <div class="image">
+        <img src="./Images/Creation/traced_items/before_waypoint.PNG" alt="Elliptical ROI on source image of a face" />
+        <figcaption>
+          <i>Fig.3a - Assisted-freehand ROI</i>
+        </figcaption>
+      </div>
+      <div class="arrow">
+        <img src="./Images/Creation/traced_items/arrow.PNG" alt="arrow" />
+      </div>
+      <div class="image">
+        <img src="./Images/Creation/traced_items/waypoint.png" alt="Elliptical ROI on source image of a face" />
+        <figcaption>
+          <i>Fig.3b - Right click to add waypoints on the ROI</i>
+        </figcaption>
+      </div>
+      <div class="arrow">
+        <img src="./Images/Creation/traced_items/arrow.PNG" alt="arrow" />
+      </div>
+      <div class="image">
+        <img src="./Images/Creation/traced_items/after_waypoint.PNG" alt="Elliptical ROI on source image of a face" />
+        <figcaption>
+          <i>Fig.3c - ROI after adjustment</i>
+        </figcaption>
+      </div>
+    </div>
+
+  </body>
+
+</html>

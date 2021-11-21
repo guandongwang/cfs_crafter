@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Stimuli Preview</title>
+    <style>
+      h1 {
+        margin: 25px;
+        text-align: center;
+      }
+
+      .container {
+        padding: 10px;
+        gap: 10px;
+        display: flex;
+        justify-content: flex-start;
+        align-items: top;
+        /* flex-wrap: wrap; */
+      }
+
+      .image {
+        width: 128px;
+      }
+
+      .graph {
+        width: 200px;
+      }
+
+      /*
+      .content {
+      }
+      */
+      /*()
+      img {
+        width: 128px;
+      }*/
+
+      img {
+        max-width: 100%;
+        max-height: 100%;
+      }
+
+      p.title {
+        font-weight: bold;
+      }
+
+    </style>
+  </head>
+
+  <body>
+    <p><a href="./Main.html">Homepage</a></p>
+    <p><a href="./Creation.html">Back to Creation</a></p>
+    <h1>Stimuli Preview</h1>
+
+    <h2>1. Stimuli Format</h2>
+
+    <p>In order to be recognized universally by different components of <b>CFS-Crafter</b>, mask stimuli
+      created by <b>Creation</b>, <b>Conversion</b> and <b>Modification</b> are all stored in the same format, which is
+      a MATLAB structure <i><u>stimuli</u></i> with the following fields:</p>
+
+    <h3>1.1. Label</h3>
+    <p>The <i><u>Label</u></i> field is used to identify the type of stimuli. All stimuli created by <b>CFS-Crafter</b>
+      will have the label <i><u>CFS-Crafter-Mask</u></i>, except the image file
+      processed by <b>Modification</b></i>, which will be labelled as <i><u>CFS-Crafter-Image</u></i>. Stimuli labelled
+      as <i><u>CFS-Crafter-Image</u></i>
+      will not be subject to temporal filtering and temporal frequency analysis.
+    </p>
+
+    <h3>1.2. Stimuli Array</h3>
+    <p>For <i><u>CFS-Crafter-Mask</u></i>, the <i><u>stimuli_array</u></i> field contains a 4-D matrix, with dimensions
+      representing <i><u>Rows</u></i>, <i><u>Columns</u></i>, <i><u>RGB Color Channels</u></i> &
+      <i><u>Frames</u></i>. Notice that for <i><u>Grayscale</u></i> stimuli, the <i><u>Color Channel</u></i> have length
+      1 instead of 3.
+    </p>
+    <p>For <i><u>CFS-Crafter-Image</u></i>, <i><u>stimuli_array</u></i> will be a 3-D matrix, with dimensions
+      representing
+      <i><u>Rows</u></i>, <i><u>Columns</u></i> & <i><u>RGB Color Channels</u></i>.
+    </p>
+
+    <h3>1.3. Screen Information</h3>
+    <p>The <i>screen_info</i> contains information entered in the main interface of <b>CFS-Crafter</b>. This
+      information can help users to implement the stimuli in experiments correctly. <a href="./Main.html">Click
+        here for details on the following fields of <i>screen_info:</i></a></p>
+
+
+    <ul>
+      <li>refresh_rate</li>
+      <li>viewing_distance</li>
+      <li>screen_width_cm</li>
+      <li>screen_height_cm</li>
+      <li>screen_width_pixel</li>
+      <li>screen_height_pixel</li>
+    </ul>
+
+
+    <h3>1.4. Stimuli Property</h3>
+    <p>The basic descriptive statistics of the created stimuli is stored in <i><u>stimuli_property</u></i>, and
+      shown in the <b>Preview</b> interface for the user to inspect. For more detailed information the user can use the
+      <b>Analysis</b> function of <b>CFS-Crafter.</b>
+    </p>
+    <ul>
+      <li><a href="./Creation.html#stimuli property">Click here for detials on the following <i>stimuli_property</i>
+          entered in
+          <b>Creation Interface</b>
+        </a>
+        <ul>
+          <li>update_rate</li>
+          <li>sequence duration</li>
+          <li>stimuli_width_degree</li>
+          <li>stimuli_width_degree</li>
+          <li>stimuli_width_pixel</li>
+          <li>stimuli_height_pixel</li>
+          <li>rms_contrast</li>
+          <li>mean_luminance</li>
+        </ul>
+      </li>
+
+      <li><a href="./Analysis.html#stimuli property">Click here for detials on the following <i>stimuli_property</i>
+          obtained by
+          <b>CFS-Crafter</b>
+        </a>
+        <ul>
+          <li>total_frames</li>
+          <li>color</li>
+          <li>entropy</li>
+        </ul>
+      </li>
+
+      <li><a href="./Edge_preview.html">Click here for detials on <i>stimuli_property</i> related to <b>Edge
+            Detection</b>
+        </a>
+        <ul>
+          <li>edge_density</li>
+          <li>edge_detection_method</li>
+          <li>edge_detection_threshold</li>
+        </ul>
+      </li>
+    </ul>
+
+
+    <h2>2. Preview & Save Stimuli</h2>
+    <p>
+      When previewing
+      <i><u>CFS-Crafter-Mask</u></i>, the <b>preview</b> interface will allow the users to play & pause the stimuli
+      sequence, or drag it across frames using the slider. Notice that due to the limitation
+      of MATLAB, the frame rate will NOT be accurate when playing the stimuli in the preview interface. If the user
+      wants to
+      view the stimuli
+      with the correct frame rate, it is better to save the stimuli as a .mp4 file. The user can also save the
+      <i><u>CFS-Crafter-Mask</u></i> as a .mat file with the fields mentioned above. Which then can be passed on to
+      <b>modification</b> or <b>Analysis</b>, or to be inspected and used in MATLAB.
+    </p>
+
+    <p>For <i><u>CFS-Crafter-Image</u></i> stimuli, similar options are available, except that it can be saved as a
+      .jpeg image file
+      instead of a .mp4 video file.</p>
+
+
+  </body>
+
+</html>

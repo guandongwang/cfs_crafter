@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Creation</title>
+
+    <style>
+      h1 {
+        margin: 25px;
+        text-align: center;
+      }
+
+      .container {
+        padding: 10px;
+        gap: 10px;
+        display: flex;
+        justify-content: flex-start;
+        align-items: top;
+        /* flex-wrap: wrap; */
+      }
+
+      .image {
+        width: 128px;
+      }
+
+      .graph {
+        width: 200px;
+      }
+
+      /*
+      .content {
+      }
+      */
+      /*()
+      img {
+        width: 128px;
+      }*/
+      figcaption {
+        font-size: small;
+      }
+
+      p.title {
+        font-weight: bold;
+      }
+
+    </style>
+  </head>
+
+  <body>
+    <a href="./Main.html">Homepage</a>
+    <h1>CFS Mask Creation</h1>
+    <p>
+      <b>Creation</b> allows the user to create various types of
+      <i><u>CFS-Crafter-Mask</u></i>. The created <i><u>CFS-Crafter-Mask</u></i> and the mask's basic information can be
+      viewed & saved in the
+      <a href="./Preview.html">preview interface.</a>
+    </p>
+
+    <h2>1. Mask Selection</h2>
+    <p>
+      <b>CFS-Crafter</b> allows the user to create CFS masks with a variety of
+      different features. When choosing the type of masks, the user should select the options following a left-to-right
+      order.
+    </p>
+
+    <h3>1.1. Patterned Element:</h3>
+    <p>
+      <i><u>Patterned Element Mask</u></i> consists of mondrian patterns with certain
+      type of elements ranging from simple geometrics such as circles or
+      squares, to more complicated elements such as objects traced from an
+      image. Here is the detail of different type of patterns that's available:
+    </p>
+
+
+    <h3>1.1.1. Geometric Shape</h3>
+    <p>
+      The first type of pattern is <i><u>geometric shape</u></i>, which means the modrain
+      pattern is consists of simple geometric shapes of various features,
+      which include:
+    </p>
+
+
+    <h4>1.1.1.1. Pattern Shape</h4>
+    <p>
+      <i><u>Pattern Shape</u></i> decides the shape of each element in the mondrian masks,
+      which can be <i><u>circle, square or diamond.</u></i>
+    </p>
+
+    <p>
+      The size of the patterns is proportional to the dimension of the
+      stimuli. There are 5 different levels for patch size. For the
+      <i><u>circle</u></i> patch, the radius is from 8% to 18% of the maximum
+      dimension of the stimuli. The size of <i><u>square</u></i> and
+      <i><u>diamond</u></i> patches are set such that they have roughly the same
+      area as the <i><u>circle</u></i> patches.
+    </p>
+
+
+    <div class="container">
+      <div class="image">
+        <img src="./Images/Creation/circle.png" alt="Circle Mondrain Pattern" style="width: 128px; height: 128px" />
+        <figcaption>
+          <i>Fig.1a - Circle Mondrain Pattern</i>
+        </figcaption>
+      </div>
+      <div class="image">
+        <img src="./Images/Creation/square.png" alt="Square Mondrain Pattern" style="width: 128px; height: 128px" />
+        <figcaption>
+          <i>Fig.1b - Square Mondrain Pattern</i>
+        </figcaption>
+      </div>
+      <div class="image">
+        <img src="./Images/Creation/diamond.png" alt="Diamond Mondrain Pattern" style="width: 128px; height: 128px" />
+        <figcaption>
+          <i>Fig.1c - Diamond Mondrain Pattern</i>
+        </figcaption>
+      </div>
+    </div>
+
+    <h4>1.1.1.2. Pattern Fill</h4>
+
+    The fill of the pattern can be either
+    <i><u>solid</u></i> colours or
+    <i><u>noise</u></i> patterns.
+
+
+    <div class="container">
+      <div class="image">
+        <img src="./Images/Creation/circle.png" alt="Circle Mondrain with Solid Fill"
+          style="width: 128px; height: 128px" />
+        <figcaption>
+          <i>Fig.2a - Circle Mondrain Pattern with Solid Fill</i>
+        </figcaption>
+      </div>
+      <div class="image">
+        <img src="./Images/Creation/square_white_noise.png" alt="Square Mondrain Pattern with White Noise Fill"
+          style="width: 128px; height: 128px" />
+        <figcaption>
+          <i>Fig.2b - Square Mondrain Pattern with White Noise Fill</i>
+        </figcaption>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="content">
+        <h4>1.1.1.3. Pattern Colour</h4>
+        <p>
+          The <i><u>Solid filled pattern</u></i> can be either in
+          <i><u>grayscale</u></i> or in <i><u>RGB</u></i> colour.
+        </p>
+
+        <p>
+          For the <i><u>grayscale</u></i> filled pattern, there are 6 different luminance
+          levels used (0; 0.2; 0.4; 0.6; 0.8; 1.0) before RMS contrast & mean
+          luminance adjustment.
+        </p>
+
+        <p>
+          For <i><u>RGB</u></i> colour filled pattern, there are 5 differet
+          colours([0 0 0]; [1 0 0]; [0 1 0]; [0 0 1]; [1 1 0]) used before RMS
+          contrast & mean luminance adjustment.
+        </p>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="image">
+        <img src="./Images/Creation/circle.png" alt="Grayscale Mondrain Pattern" style="width: 128px; height: 128px" />
+        <figcaption>
+          <i>Fig.3a - Grayscale Mondrain Pattern</i>
+        </figcaption>
+      </div>
+      <div class="image">
+        <img src="./Images/Creation/circle_rgb.png" alt="Rgb Colored Mondrain Patter"
+          style="width: 128px; height: 128px" />
+        <figcaption>
+          <i>Fig.3b - Rgb Colored Mondrain Pattern</i>
+        </figcaption>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="content">
+        <h4>1.1.1.4. Pattern Noise Type</h4>
+        <p>
+          <i><u>Noise filled pattern</u></i> will be grayscaled <i><u>White Noise</u></i> or <i><u>Pink Noise.</u></i>
+        </p>
+        </p>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="image">
+        <img src="./Images/Creation/square_white_noise.png" alt="White Noise Filled Pattern"
+          style="width: 128px; height: 128px" />
+        <figcaption>
+          <i>Fig.4a - White Noise Filled Pattern</i>
+        </figcaption>
+      </div>
+      <div class="image">
+        <img src="./Images/Creation/circle_pink_noise.png" alt="Pink Noise Filled Pattern"
+          style="width: 128px; height: 128px" />
+        <figcaption>
+          <i>Fig.4b - Pink Noise Filled Pattern</i>
+        </figcaption>
+      </div>
+    </div>
+
+    <h4>1.1.2: Traced Items</h4>
+    <p>
+      The user can also trace up to 5 different faces/objects and create mondrian
+      patterns from these traced items. <b>CFS-Crafter</b> allows users to trace up to 5 different objects/faces to
+      create a
+      stimuli sequence. <a href="./Trace.html">Click here for help on item tracing.</a>
+    </p>
+
+    <div class="container">
+      <div class="image">
+        <img src="./Images/Creation/traced_face.png" alt="Traced Face Mondrain Pattern"
+          style="width: 128px; height: 128px" />
+        <figcaption>
+          <i>Fig.5a - Traced Face Mondrain Pattern</i>
+        </figcaption>
+      </div>
+      <div class="image">
+        <img src="./Images/Creation/traced_object.png" alt="Traced Object Mondrain Pattern"
+          style="width: 128px; height: 128px" />
+        <figcaption>
+          <i>Fig.5b - Traced Object Mondrain Pattern</i>
+        </figcaption>
+      </div>
+    </div>
+
+    <h3>1.2. Noise Masks</h3>
+
+    <p>Masks consists of dynamic sequence of white noise or pink noise.</p>
+
+    <h4>1.2.1. White Noise</h4>
+    <div class="container">
+      <div class="image">
+        <img src="./Images/Creation/white_noise.png" alt="White Noise Mask" style="width: 128px; height: 128px" />
+        <figcaption>
+          <i>Fig.6a - White Noise Mask</i>
+        </figcaption>
+      </div>
+
+      <div class="content">
+        <p> <i><u>White Noise</u></i> consists of random intensity between 0 to 1 at all pixels before RMS contrast &
+          mean luminance
+          adjustments, which leads to roughly constant power spectral density (PSD) across all frequencies.</p>
+      </div>
+    </div>
+
+    <h4>1.2.2. Pink Noise</h4>
+    <div class="container">
+      <div class="image">
+        <img src="./Images/Creation/pink_noise.png" alt="Pink Noise Mask" style="width: 128px; height: 128px" />
+        <figcaption>
+          <i>Fig.6b - Pink Noise Mask</i>
+        </figcaption>
+      </div>
+      <div class="content">
+        <p><i><u>Pink Noise</u></i> has PSD inversely proportional to the frequency. Which closely resemble
+          the
+          natural scene.</p>
+      </div>
+    </div>
+
+    <h2 id="stimuli property">2. Mask Creation Parameters</h2>
+    <p>
+      Users need to enter the parameters for the mask they want to create.
+    </p>
+    <h3>2.1. Mask Dimensions:</h3>
+    <p>Width & height in pixels, the size in
+      the degree of visual angle will be calculated & shown in the preview
+      interface.</p>
+
+    <h3 id="Mask Update Rate">2.2. Mask Update Rate & Mask Sequence Duration:</h3>
+    <p>
+      The <i><u>Mask Update Rate</u></i> is the rate at which the images is updated in the
+      stimuli sequence.
+    </p>
+
+    <p>Notice <i><u>Mask Update Rate</u></i> is not the same as <i><u>Temporal Frequency</u></i>, even through they both
+      in the unit of Hertz. <a href="./Modification.html#Temporal Filtering">Click here for details on <i>Temporal
+          Frequency</i> and means to manipulate it.</a>
+    </p>
+
+    <p><i><u>Mask Sequence Duration</u></i> is the duration of the created CFS mask stimulus with unit of second. Notice
+      the duration input here should be relative short (a few seconds at most), since the increase in duration & frames
+      will drastically increase the size of the stimuli array & the processing speed. If the experiment design requires
+      long suppression time, consider looping through one or multiple short sequences created by <b>CFS-Crafter</b>.
+    </p>
+
+    <h3 id="RMS Contrast & Mean Luminance">2.3. RMS Contrast & Mean Luminance:</h3>
+
+    <p>The <i><u>Root Mean Square(RMS) Contrast</u></i> of an image is the average standard
+      deviation of the intensity of each pixel. For RGB coloured stimuli each frame
+      is first converted to grayscale and then the RMS contrast is
+      calculated. Here the RMS contrast entered is the targeted average RMS
+      contrast for the entire stimuli sequence.
+    </p>
+
+    <p>
+      Similarly, the mean luminance of an image is the average value of intneisty across all the
+      pixels. Here the mean luminance is the targeted average luminance of
+      the created stimuli sequence.
+    </p>
+
+    <h4 id="Clipping">2.2.1. Image Clipping</h4>
+    <p>The figure below shows cross-sections of the same mondrain patterned masks with different levels of RMS contrast
+      and
+      mean luminance setting. As what we see here, when the target RMS contrast is large, or when the target mean
+      luminance is very extreme, or both at the same time, part of the pixels will have intensity fall outside of the
+      [0,1] range, in
+      order
+      to present the stimuli, these pixels must have their intensity clipped back to 0 or 1. This process is called
+      <i><u>clipping</u></i> of the image. And clipping of the image will result in the actual RMS Contrast & luminance
+      of the stimuli being
+      different
+      from the user's setting.
+    </p>
+
+
+    <h4>RMS Contrast Adjustment & Clipping</h4>
+    <div class="container">
+      <div class="graph">
+        <img src="./Images/Creation/rms_0.2_mean_0.5.png" alt="Grayscale CFS stimuli"
+          style="width: 200px; height: 200px" />
+        <figcaption><i>Fig.7a - Original</i></figcaption>
+      </div>
+      <div class="graph">
+        <img src="./Images/Creation/rms_0.5_mean_0.5.png" alt="Grayscale CFS stimuli"
+          style="width: 200px; height: 200px" />
+        <figcaption><i>Fig.7b - After RMS contrast adjustment, before clipping</i></figcaption>
+      </div>
+      <div class="graph">
+        <img src="./Images/Creation/rms_0.37_mean_0.48.png" alt="Grayscale CFS stimuli"
+          style="width: 200px; height: 200px" />
+        <figcaption><i>Fig.7c - After RMS contrast adjustment & clipping</i></figcaption>
+      </div>
+
+    </div>
+
+    <h4>Mean Luminance Adjustment & Clipping</h4>
+    <div class="container">
+      <div class="graph">
+        <img src="./Images/Creation/rms_0.2_mean_0.5.png" alt="Grayscale CFS stimuli"
+          style="width: 200px; height: 200px" />
+        <figcaption><i>Fig.8a - Original</i></figcaption>
+      </div>
+      <div class="graph">
+        <img src="./Images/Creation/rms_0.2_mean_0.8.png" alt="Grayscale CFS stimuli"
+          style="width: 200px; height: 200px" />
+        <figcaption><i>Fig.8b - After mean luminance adjustment, before clipping</i></figcaption>
+      </div>
+      <div class="graph">
+        <img src="./Images/Creation/rms_0.17_mean_0.78.png" alt="Grayscale CFS stimuli"
+          style="width: 200px; height: 200px" />
+        <figcaption><i>Fig.8c - After mean luminance adjustment & clipping</i></figcaption>
+      </div>
+    </div>
+  </body>
+
+</html>
