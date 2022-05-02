@@ -1,2 +1,2 @@
 # cfs_crafter
-Create, modify and analyse continuous flash suppression stimuli
+Create, modify and analyze continuous flash suppression stimuli
