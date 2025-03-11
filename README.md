@@ -41,7 +41,7 @@ The **Creation** function allows users to generate various types of *CFS-Crafter
 
 - **[Stimuli Preview](./Preview.html)**  
 
-  <img src="https://raw.githubusercontent.com/guandongwang/cfs_crafter/main/CFS-Crafter%20Help%20Information/Images/Creation/preview.png" width="250" height="250">  
+  <img src="https://raw.githubusercontent.com/guandongwang/cfs_crafter/main/CFS-Crafter%20Help%20Information/Images/Creation/preview.png" width="250" height="280">  
 
   Details about previewing & saving *CFS-Crafter Masks* & *Images*.  
 
@@ -59,7 +59,7 @@ The **Modification** function applies spatial, temporal, and orientation filteri
 
 ### 2.4. [Analysis](./Analysis.html)  
 
-<img src="https://raw.githubusercontent.com/guandongwang/cfs_crafter/main/CFS-Crafter%20Help%20Information/Images/Analysis/analysis_results.png" width="250" height="250">  
+<img src="https://raw.githubusercontent.com/guandongwang/cfs_crafter/main/CFS-Crafter%20Help%20Information/Images/Analysis/analysis_results.png" width="250" height="280">  
 
 The **Analysis** function provides tools for analyzing and comparing descriptive statistics, spatiotemporal frequencies, and color content of multiple stimuli (*CFS-Crafter Masks* or *Images*).  
 
