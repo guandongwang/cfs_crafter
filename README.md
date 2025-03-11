@@ -41,7 +41,7 @@ The **Creation** function allows users to generate various types of *CFS-Crafter
 
 - **[Stimuli Preview](./Preview.html)**  
 
-  <img src="https://raw.githubusercontent.com/guandongwang/cfs_crafter/main/CFS-Crafter%20Help%20Information/Images/Creation/preview.png" width="250" height="280">  
+  <img src="https://raw.githubusercontent.com/guandongwang/cfs_crafter/main/CFS-Crafter%20Help%20Information/Images/Creation/preview.png" width="350" height="400">  
 
   Details about previewing & saving *CFS-Crafter Masks* & *Images*.  
 
