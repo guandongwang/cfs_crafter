@@ -1,4 +1,4 @@
-# cfs_crafter
+# CFS-Crafter Citation
 Wang, G., Alais, D., Blake, R. et al. CFS-crafter: An open-source tool for creating and analyzing images for continuous flash suppression experiments. Behav Res (2022). https://doi.org/10.3758/s13428-022-01903-7
 
 # CFS-Crafter Help Information
@@ -25,44 +25,43 @@ Information of the screen at which the user intends to show the stimuli needs to
 
 ### 2.1. [Creation](./Creation.html)
 
-![Grayscale CFS stimuli created by CFS Crafter](./Images/Creation/gray_mondrain.gif)
+![Grayscale CFS stimuli created by CFS Crafter](https://raw.githubusercontent.com/guandongwang/cfs_crafter/main/CFS-Crafter%20Help%20Information/Images/Creation/gray_mondrain.gif)
 
 **Creation** allows the user to create various types of *CFS-Crafter-Mask*, which can be saved as a .mat file with related information or as a .mp4 video file.
 
 - [2.1.1. Traced Pattern](./Trace.html)
 
-  ![Traced Face Mondrain Pattern](./Images/Creation/traced_items/face.gif)
+  ![Traced Face Mondrain Pattern](https://raw.githubusercontent.com/guandongwang/cfs_crafter/main/CFS-Crafter%20Help%20Information/Images/Creation/traced_items/face.gif)
   
   Details about *traced item patterned masks* in **Creation**.
 
 - [2.1.2. Stimuli Preview](./Preview.html)
 
-  ![Preview Interface](./Images/Creation/preview.png)
+  ![Preview Interface](https://raw.githubusercontent.com/guandongwang/cfs_crafter/main/CFS-Crafter%20Help%20Information/Images/Creation/preview.png)
   
   Details about previewing & saving *CFS-Crafter-Masks* & *Images*.
 
 ### 2.2. [Conversion](./Conversion.html)
 
-![Stimuli Created using Conversion](./Images/Conversion/image_sequence.gif)
+![Stimuli Created using Conversion](https://raw.githubusercontent.com/guandongwang/cfs_crafter/main/CFS-Crafter%20Help%20Information/Images/Conversion/image_sequence.gif)
 
 **Conversion** allows the user to convert a set of images into a *CFS-Crafter-Mask*, so that it can be modified or analyzed using **CFS-Crafter**.
 
 ### 2.3. [Modification](./Modification.html)
 
-![RGB stimuli created and modified by CFS Crafter](./Images/Modification/after_termporal_filtering.gif)
+![RGB stimuli created and modified by CFS Crafter](https://raw.githubusercontent.com/guandongwang/cfs_crafter/main/CFS-Crafter%20Help%20Information/Images/Modification/after_termporal_filtering.gif)
 
 **Modification** allows the user to apply spatial/temporal/orientation filtering and phase scrambling to *CFS-Crafter-Masks* or *Images*.
 
 ### 2.4. [Analysis](./Analysis.html)
 
-![Analysis results](./Images/Analysis/analysis_results.png)
+![Analysis results](https://raw.githubusercontent.com/guandongwang/cfs_crafter/main/CFS-Crafter%20Help%20Information/Images/Analysis/analysis_results.png)
 
 **Analysis** allows the user to analyze and compare the descriptive statistics, spatiotemporal frequencies, and color contents of multiple stimuli (*CFS-Crafter-Masks* or *Images*).
 
 - [2.4.1. Edge Detection](./Edge_preview.html)
 
-  ![Edge Detection](./Images/Analysis/edge_detection.png)
+  ![Edge Detection](https://raw.githubusercontent.com/guandongwang/cfs_crafter/main/CFS-Crafter%20Help%20Information/Images/Analysis/edge_detection.png)
   
   Details about edge detection in **Analysis**.
-
 
