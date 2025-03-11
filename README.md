@@ -59,7 +59,7 @@ The **Modification** function applies spatial, temporal, and orientation filteri
 
 ### 2.4. [Analysis](./Analysis.html)  
 
-<img src="https://raw.githubusercontent.com/guandongwang/cfs_crafter/main/CFS-Crafter%20Help%20Information/Images/Analysis/analysis_results.png" width="250" height="280">  
+<img src="https://raw.githubusercontent.com/guandongwang/cfs_crafter/main/CFS-Crafter%20Help%20Information/Images/Analysis/analysis_results.png" width="350" height="400">  
 
 The **Analysis** function provides tools for analyzing and comparing descriptive statistics, spatiotemporal frequencies, and color content of multiple stimuli (*CFS-Crafter Masks* or *Images*).  
 
