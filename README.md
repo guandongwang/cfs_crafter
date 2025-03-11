@@ -1,67 +1,72 @@
 # CFS-Crafter Citation
 Wang, G., Alais, D., Blake, R. et al. CFS-crafter: An open-source tool for creating and analyzing images for continuous flash suppression experiments. Behav Res (2022). https://doi.org/10.3758/s13428-022-01903-7
 
-# CFS-Crafter Help Information
+# CFS-Crafter Help Information  
 
-**CFS-Crafter** is an open-source MATLAB application designed for fine control manipulation and analyses of CFS stimuli. As the application does not require prior expertise in image processing and analysis, it provides an accessible platform for improving stimulus control, increasing comprehension of CFS findings, and generating more effective CFS animations.
+**CFS-Crafter** is an open-source MATLAB application designed for precise control, manipulation, and analysis of CFS stimuli. The application does not require prior expertise in image processing and analysis, making it an accessible tool for improving stimulus control, enhancing comprehension of CFS findings, and generating more effective CFS animations.  
 
-## 1. Screen Information
+---
 
-Information of the screen at which the user intends to show the stimuli needs to be manually entered, which would provide the basis for calculating certain basic parameters. The user can only proceed to the next step after filling in all the required screen information.
+## 1. Screen Information  
 
-### 1.1. Screen Refresh Rate (Hz)
+Users must manually enter the screen details for stimulus presentation. This information is essential for calculating key parameters. The user cannot proceed to the next step without completing all required fields.  
 
-*Screen Refresh Rate* should be set to the refresh rate of the screen on which the stimulus will be presented. Incorrect screen refresh rate will lead to errors in the frame rate of created stimuli and other temporal features.
+### 1.1. Screen Refresh Rate (Hz)  
 
-### 1.2. Viewing Distance (cm)
+The *screen refresh rate* should match the refresh rate of the display used for stimulus presentation. An incorrect value may cause errors in frame rate and other temporal properties.  
 
-*Viewing Distance* is the distance between the participants' eyes and the screen during the experiment. Incorrect viewing distance will lead to errors in the calculation of parameters related to the degree of visual angle.
+### 1.2. Viewing Distance (cm)  
 
-### 1.3. Screen Resolutions (pixels) & Screen Dimensions (cm)
+The *viewing distance* is the distance between the participant’s eyes and the screen during the experiment. Incorrect values may lead to errors in calculations related to the degree of visual angle.  
 
-**CFS-Crafter** reads the *resolution* and *dimension* of the current screen and inputs them as the default values. If the user intends to use the stimuli on a different screen, these values must be changed manually. Errors in this information will result in errors in spatial frequency and other spatial features.
+### 1.3. Screen Resolution (pixels) & Screen Dimensions (cm)  
 
-## 2. Choose Function
+**CFS-Crafter** automatically detects the *screen resolution* and *dimensions* of the current display and sets them as default values. If the stimuli will be used on a different screen, these values must be updated manually. Incorrect information may cause errors in spatial frequency and other spatial properties.  
 
-### 2.1. [Creation](./Creation.html)
+---
 
-![Grayscale CFS stimuli created by CFS Crafter](https://raw.githubusercontent.com/guandongwang/cfs_crafter/main/CFS-Crafter%20Help%20Information/Images/Creation/gray_mondrain.gif)
+## 2. Choose Function  
 
-**Creation** allows the user to create various types of *CFS-Crafter-Mask*, which can be saved as a .mat file with related information or as a .mp4 video file.
+### 2.1. [Creation](./Creation.html)  
 
-- [2.1.1. Traced Pattern](./Trace.html)
+<img src="https://raw.githubusercontent.com/guandongwang/cfs_crafter/main/CFS-Crafter%20Help%20Information/Images/Creation/gray_mondrain.gif" width="300" height="300">  
 
-  ![Traced Face Mondrain Pattern](https://raw.githubusercontent.com/guandongwang/cfs_crafter/main/CFS-Crafter%20Help%20Information/Images/Creation/traced_items/face.gif)
-  
-  Details about *traced item patterned masks* in **Creation**.
+The **Creation** function allows users to generate various types of *CFS-Crafter Masks*, which can be saved as `.mat` files with metadata or exported as `.mp4` video files.  
 
-- [2.1.2. Stimuli Preview](./Preview.html)
+- **[Traced Pattern](./Trace.html)**  
 
-  ![Preview Interface](https://raw.githubusercontent.com/guandongwang/cfs_crafter/main/CFS-Crafter%20Help%20Information/Images/Creation/preview.png)
-  
-  Details about previewing & saving *CFS-Crafter-Masks* & *Images*.
+  <img src="https://raw.githubusercontent.com/guandongwang/cfs_crafter/main/CFS-Crafter%20Help%20Information/Images/Creation/traced_items/face.gif" width="300" height="300">  
 
-### 2.2. [Conversion](./Conversion.html)
+  Details about *traced item patterned masks* in **Creation**.  
 
-![Stimuli Created using Conversion](https://raw.githubusercontent.com/guandongwang/cfs_crafter/main/CFS-Crafter%20Help%20Information/Images/Conversion/image_sequence.gif)
+- **[Stimuli Preview](./Preview.html)**  
 
-**Conversion** allows the user to convert a set of images into a *CFS-Crafter-Mask*, so that it can be modified or analyzed using **CFS-Crafter**.
+  <img src="https://raw.githubusercontent.com/guandongwang/cfs_crafter/main/CFS-Crafter%20Help%20Information/Images/Creation/preview.png" width="300" height="300">  
 
-### 2.3. [Modification](./Modification.html)
+  Details about previewing & saving *CFS-Crafter Masks* & *Images*.  
 
-![RGB stimuli created and modified by CFS Crafter](https://raw.githubusercontent.com/guandongwang/cfs_crafter/main/CFS-Crafter%20Help%20Information/Images/Modification/after_termporal_filtering.gif)
+### 2.2. [Conversion](./Conversion.html)  
 
-**Modification** allows the user to apply spatial/temporal/orientation filtering and phase scrambling to *CFS-Crafter-Masks* or *Images*.
+<img src="https://raw.githubusercontent.com/guandongwang/cfs_crafter/main/CFS-Crafter%20Help%20Information/Images/Conversion/image_sequence.gif" width="300" height="300">  
 
-### 2.4. [Analysis](./Analysis.html)
+The **Conversion** function allows users to transform a set of images into a *CFS-Crafter Mask*, enabling further modification or analysis.  
 
-![Analysis results](https://raw.githubusercontent.com/guandongwang/cfs_crafter/main/CFS-Crafter%20Help%20Information/Images/Analysis/analysis_results.png)
+### 2.3. [Modification](./Modification.html)  
 
-**Analysis** allows the user to analyze and compare the descriptive statistics, spatiotemporal frequencies, and color contents of multiple stimuli (*CFS-Crafter-Masks* or *Images*).
+<img src="https://raw.githubusercontent.com/guandongwang/cfs_crafter/main/CFS-Crafter%20Help%20Information/Images/Modification/after_termporal_filtering.gif" width="300" height="300">  
 
-- [2.4.1. Edge Detection](./Edge_preview.html)
+The **Modification** function applies spatial, temporal, and orientation filtering, as well as phase scrambling, to *CFS-Crafter Masks* or *Images*.  
 
-  ![Edge Detection](https://raw.githubusercontent.com/guandongwang/cfs_crafter/main/CFS-Crafter%20Help%20Information/Images/Analysis/edge_detection.png)
-  
-  Details about edge detection in **Analysis**.
+### 2.4. [Analysis](./Analysis.html)  
+
+<img src="https://raw.githubusercontent.com/guandongwang/cfs_crafter/main/CFS-Crafter%20Help%20Information/Images/Analysis/analysis_results.png" width="300" height="300">  
+
+The **Analysis** function provides tools for analyzing and comparing descriptive statistics, spatiotemporal frequencies, and color content of multiple stimuli (*CFS-Crafter Masks* or *Images*).  
+
+- **[Edge Detection](./Edge_preview.html)**  
+
+  <img src="https://raw.githubusercontent.com/guandongwang/cfs_crafter/main/CFS-Crafter%20Help%20Information/Images/Analysis/edge_detection.png" width="300" height="300">  
+
+  Details about edge detection in **Analysis**.  
+
 
