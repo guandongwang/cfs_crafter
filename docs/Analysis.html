@@ -6,64 +6,25 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Analysis</title>
-    <style>
-      h1 {
-        margin: 25px;
-        text-align: center;
-      }
-
-      .container {
-        padding: 10px;
-        gap: 10px;
-        display: flex;
-        justify-content: flex-start;
-        align-items: center;
-      }
-
-      .image {
-        width: 128px;
-      }
-
-      .graph {
-        height: 256px;
-      }
-
-      /*
-      .content {
-      }
-      */
-
-      img {
-        max-width: 100%;
-        max-height: 100%;
-      }
-
-      li {
-        font-weight: bold;
-      }
-
-      p.title {
-        font-weight: bold;
-      }
-
-    </style>
+    
+    <link rel="stylesheet" href="./style.css" />
   </head>
 
-  <body>
-    <a href="./index.html">Homepage</a>
+  <body class="analysis-page">
+    <a class="nav-btn" href="./index.html">Homepage</a>
     <h1>Analysis</h1>
     <p></p>
     <h2>1. Select Stimuli</h2>
 
     <p>
       The <b>Analysis</b> function allows users to analyze and compare different stimuli
-      (<i><u>CFS-Crafter-Mask</u></i>, <i><u>CFS-Crafter-Image</u></i>
+      (<i>CFS-Crafter-Mask</i>, <i>CFS-Crafter-Image</i>
       or image file in the format of .png, .jpg, .jpeg & .tiff). These stimuli can be added by clicking the <b>Add
         Stimuli</b> button.
     </p>
 
-    <p>Note that the selected image file will first be converted to a <i><u>CFS-Crafter Image</u></i> using the
-      <i><u>screen_info</u></i> entered in the main interface. Hence it is important to ensure the accuracy of the
+    <p>Note that the selected image file will first be converted to a <i>CFS-Crafter Image</i> using the
+      <i>screen_info</i> entered in the main interface. Hence it is important to ensure the accuracy of the
       screen
       information.
     </p>
@@ -96,7 +57,7 @@
         grayscale and then the entropy is calculated.</p>
 
       <li>RMS Contrast & Mean Luminance</li>
-      Root-Mean-Square (RMS) Contrast and average luminance (intensity) of the stimuli. <a
+      <p>Root-Mean-Square (RMS) Contrast and average luminance (intensity) of the stimuli. <a
         href="./Creation.html#RMS Contrast & Mean Luminance">For
         details
         on
@@ -122,7 +83,7 @@
 
     <h4 id="Temporal Frequency">2.2.2. Temporal Frequency</h4>
     <p>For temporal frequency analysis, a similar process is performed. Note that only
-      <i><u>CFS-Crafter-Mask</u></i> will be subjected to temporal frequency analysis; <i><u>CFS-Crafter-Image</u></i> and
+      <i>CFS-Crafter-Mask</i> will be subjected to temporal frequency analysis; <i>CFS-Crafter-Image</i> and
       standard image files will be ignored.
     </p>
 
@@ -173,15 +134,15 @@
       view.</p>
 
     <p>Graphs can be saved by using the right-click context menu. The user can also save the analysis results as a
-      <i><u>CFS-Crafter-Analysis-Results</u></i> .mat file, which contains the following information for each stimulus:
+      <i>CFS-Crafter-Analysis-Results</i> .mat file, which contains the following information for each stimulus:
     </p>
 
     <ul>
       <li>basic_info:</li>
-      <p>all information included in the <b>Basic Information</b> table</p>
+      <p>All information included in the <b>Basic Information</b> table</p>
 
       <li>frequency_results</li>
-      <p>frequency(x value) & PSD (y value) for Spatial & Temporal PSD plot.</p>
+      <p>Frequency (x value) & PSD (y value) for Spatial & Temporal PSD plot.</p>
 
       <li>hsv_results</li>
       <p>HSV array for each stimulus, bin_counts, bin_edges, and descriptive statistics (mean, median, mode, and range) for

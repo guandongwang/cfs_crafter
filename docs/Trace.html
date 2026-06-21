@@ -6,53 +6,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Trace</title>
-    <style>
-      h1 {
-        margin: 25px;
-        text-align: center;
-      }
-
-      .container {
-        padding: 10px;
-        gap: 10px;
-        display: flex;
-        justify-content: flex-start;
-        align-items: center;
-      }
-
-      .image {
-        width: 256px;
-      }
-
-      .arrow {
-        width: 70px;
-        align-items: center;
-      }
-
-      .cross {
-        width: 64px;
-        align-items: center;
-      }
-
-      img {
-        max-width: 100%;
-        max-height: 100%;
-      }
-
-      figcaption {
-        font-size: small;
-      }
-
-      p.title {
-        font-weight: bold;
-      }
-
-    </style>
+    
+    <link rel="stylesheet" href="./style.css" />
   </head>
 
-  <body>
-    <p><a href="./index.html">Homepage</a></p>
-    <p><a href="./Creation.html">Back to Creation</a></p>
+  <body class="trace-page">
+    <a class="nav-btn" href="./index.html">Homepage</a>
+    <a class="nav-btn" href="./Creation.html">Back to Creation</a>
 
     <h1>Traced Pattern</h1>
     <p>
@@ -60,11 +20,11 @@
       a stimuli sequence. The tracing method is based on MATLAB's ROI-based
       processing.
     </p>
-    <p>Two types of items are supported: <i><u>Faces and Objects.</u></i> </p>
+    <p>Two types of items are supported: <i>Faces and Objects.</i> </p>
     <h2>1. Face</h2>
 
     <p>
-      <i><u>Face</u></i> tracing uses an elliptical ROI which allows users to select
+      <i>Face</i> tracing uses an elliptical ROI which allows users to select
       the face from the provided source image.
     </p>
 
@@ -118,10 +78,10 @@
     <h2>2. Object</h2>
 
     <p>
-      <i><u>Object Tracing</u></i> is very similar to face tracing, except a <i><u>assisted
-          freehand ROI</u></i> was used to trace the edges of the object. In addition to the
+      <i>Object Tracing</i> is very similar to face tracing, except an <i>assisted
+          freehand ROI</i> was used to trace the edges of the object. In addition to the
       previously mentioned adjustment in terms of size and mean luminance
-      level, the patches are also rotated to 8 different <i><u>Orientations</u></i>(0&#176, 45&#176, 90&#176,
+      level, the patches are also rotated to 8 different <i>Orientations</i> (0&#176, 45&#176, 90&#176,
       135&#176,180&#176,
       225&#176, 270&#176, 315&#176).
     </p>
@@ -131,7 +91,7 @@
       <div class="image">
         <img src="./Images/Creation/traced_items/object_tracing.PNG"
           alt="assisted-freehand ROI on source image of an apple" />
-        <i>Fig.2a - assisted-freehand ROI</i>
+        <figcaption><i>Fig.2a - assisted-freehand ROI</i></figcaption>
       </div>
       <div class="arrow">
         <img src="./Images/Creation/traced_items/arrow.PNG" alt="arrow" />
@@ -164,7 +124,7 @@
     </div>
 
     <p>When drawing the assisted-freehand ROI, the outline might not be exactly as desired. Users can right-click on
-      the ROI edges to add <i><u>waypoints</u></i>, and then by dragging these waypoints the overall shape as well as
+      the ROI edges to add <i>waypoints</i>, and then by dragging these waypoints the overall shape as well as
       details
       of
       the

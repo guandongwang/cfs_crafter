@@ -1,0 +1,285 @@
+/* CSS Design System for CFS-Crafter Documentation */
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap');
+
+body {
+  font-family: 'Outfit', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  color: #334155;
+  background-color: #f8fafc;
+  line-height: 1.65;
+  margin: 0;
+  padding: 40px 24px;
+}
+
+/* Center and limit page width for premium readability */
+body > * {
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Headings with premium look */
+h1 {
+  font-size: 2.25rem;
+  font-weight: 700;
+  color: #0f172a;
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 30px;
+  border-bottom: 2px solid #e2e8f0;
+  padding-bottom: 16px;
+}
+
+h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #1e293b;
+  margin-top: 40px;
+  margin-bottom: 20px;
+  border-left: 4px solid #3b82f6;
+  padding-left: 14px;
+}
+
+h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #334155;
+  margin-top: 30px;
+  margin-bottom: 16px;
+}
+
+h4 {
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: #475569;
+  margin-top: 24px;
+  margin-bottom: 12px;
+}
+
+/* Paragraphs & Text */
+p {
+  margin-top: 0;
+  margin-bottom: 16px;
+  font-size: 1.025rem;
+  color: #475569;
+}
+
+p.title {
+  font-weight: 600;
+  color: #0f172a;
+}
+
+b, strong {
+  color: #0f172a;
+}
+
+/* Modern navigation buttons */
+a {
+  color: #2563eb;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.15s ease;
+}
+
+a:hover {
+  color: #1d4ed8;
+  text-decoration: underline;
+}
+
+/* Style home / back navigation links as premium pill buttons */
+.nav-btn {
+  display: inline-flex;
+  align-items: center;
+  background-color: #ffffff;
+  border: 1px solid #cbd5e1;
+  padding: 8px 18px;
+  border-radius: 30px;
+  color: #475569;
+  font-size: 0.875rem;
+  margin-right: 8px;
+  margin-bottom: 24px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  font-weight: 500;
+  transition: all 0.15s ease;
+  text-decoration: none;
+}
+
+.nav-btn:hover {
+  background-color: #f1f5f9;
+  color: #0f172a;
+  border-color: #94a3b8;
+  transform: translateY(-1px);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08);
+}
+
+/* Custom list layout */
+ul {
+  padding-left: 24px;
+  margin-bottom: 24px;
+}
+
+li {
+  margin-bottom: 10px;
+  color: #475569;
+}
+
+/* Card-like Flex Containers */
+.container {
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 24px;
+  margin-top: 24px;
+  margin-bottom: 24px;
+  gap: 20px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+  flex-wrap: wrap;
+}
+
+/* Flex items styling */
+.image {
+  width: 128px;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.image_small {
+  width: 100px;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.graph {
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.arrow {
+  width: 64px;
+  flex-shrink: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cross {
+  width: 64px;
+  flex-shrink: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.content {
+  flex: 1;
+  min-width: 260px;
+}
+
+/* Image visuals */
+img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+img:hover {
+  transform: scale(1.04);
+}
+
+.image img, .image_small img, .graph img, .arrow img, .cross img {
+  width: 100%;
+}
+
+/* Figcaptions */
+figcaption {
+  font-size: 0.825rem;
+  color: #64748b;
+  text-align: center;
+  margin-top: 6px;
+  font-weight: 500;
+}
+
+/* Code styling */
+code {
+  font-family: SFMono-Regular, Consolas, "Liberation Mono", Menlo, monospace;
+  background-color: #f1f5f9;
+  color: #0f172a;
+  padding: 3px 6px;
+  border-radius: 6px;
+  font-size: 0.875rem;
+}
+
+/* Page-specific overrides via body classes */
+
+/* Trace page has larger images */
+body.trace-page .image {
+  width: 256px;
+}
+
+/* Analysis graphs layout */
+body.analysis-page .graph {
+  height: auto;
+  width: auto;
+  max-width: 280px;
+}
+
+/* Modification page graphs are wider */
+body.modification-page .graph {
+  width: 100%;
+  max-width: 440px;
+}
+
+/* Gallery layout for examples library */
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  margin-bottom: 40px;
+}
+
+.gallery-item {
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 16px;
+  width: 220px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s;
+}
+
+.gallery-item:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+.gallery-item img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 12px;
+}
+
+.gallery-item p {
+  font-size: 0.95rem;
+  text-align: center;
+  margin: 0;
+  color: #334155;
+  font-weight: 600;
+}

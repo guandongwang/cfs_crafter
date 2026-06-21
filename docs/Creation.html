@@ -7,54 +7,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Creation</title>
 
-    <style>
-      h1 {
-        margin: 25px;
-        text-align: center;
-      }
-
-      .container {
-        padding: 10px;
-        gap: 10px;
-        display: flex;
-        justify-content: flex-start;
-        align-items: top;
-        /* flex-wrap: wrap; */
-      }
-
-      .image {
-        width: 128px;
-      }
-
-      .graph {
-        width: 200px;
-      }
-
-      /*
-      .content {
-      }
-      */
-      /*()
-      img {
-        width: 128px;
-      }*/
-      figcaption {
-        font-size: small;
-      }
-
-      p.title {
-        font-weight: bold;
-      }
-
-    </style>
+    
+    <link rel="stylesheet" href="./style.css" />
   </head>
 
-  <body>
-    <a href="./index.html">Homepage</a>
+  <body class="creation-page">
+    <a class="nav-btn" href="./index.html">Homepage</a>
     <h1>CFS Mask Creation</h1>
     <p>
       <b>Creation</b> allows the user to create various types of
-      <i><u>CFS-Crafter masks</u></i>. The created <i><u>CFS-Crafter masks</u></i> and their basic information can be
+      <i>CFS-Crafter masks</i>. The created <i>CFS-Crafter masks</i> and their basic information can be
       viewed & saved in the
       <a href="./Preview.html">preview interface.</a>
     </p>
@@ -68,16 +30,16 @@
 
     <h3>1.1. Patterned Element:</h3>
     <p>
-      <i><u>Patterned Element Mask</u></i> consists of mondrian patterns with certain
-      type of elements ranging from simple geometrics such as circles or
+      <i>Patterned Element Mask</i> consists of Mondrian patterns with certain
+      types of elements ranging from simple geometrics such as circles or
       squares, to more complicated elements such as objects traced from an
-      image. Here is the detail of different type of patterns that's available:
+      image. Here are the details of different types of patterns that are available:
     </p>
 
 
     <h3>1.1.1. Geometric Shape</h3>
     <p>
-      The first type of pattern is <i><u>geometric shape</u></i>, which means the Mondrian
+      The first type of pattern is <i>geometric shape</i>, which means the Mondrian
       pattern consists of simple geometric shapes of various features,
       which include:
     </p>
@@ -85,17 +47,17 @@
 
     <h4>1.1.1.1. Pattern Shape</h4>
     <p>
-      <i><u>Pattern Shape</u></i> decides the shape of each element in the mondrian masks,
-      which can be <i><u>circle, square or diamond.</u></i>
+      <i>Pattern Shape</i> determines the shape of each element in the Mondrian masks,
+      which can be <i>circle, square or diamond.</i>
     </p>
 
     <p>
       The size of the patterns is proportional to the dimension of the
       stimuli. There are 5 different levels for patch size. For the
-      <i><u>circle</u></i> patch, the radius is from 8% to 18% of the maximum
-      dimension of the stimuli. The size of <i><u>square</u></i> and
-      <i><u>diamond</u></i> patches are set such that they have roughly the same
-      area as the <i><u>circle</u></i> patches.
+      <i>circle</i> patch, the radius ranges from 8% to 18% of the maximum
+      dimension of the stimuli. The sizes of <i>square</i> and
+      <i>diamond</i> patches are set such that they have roughly the same
+      area as the <i>circle</i> patches.
     </p>
 
 
@@ -122,14 +84,16 @@
 
     <h4>1.1.1.2. Pattern Fill</h4>
 
-    The fill of the pattern can be either
-    <i><u>solid</u></i> colours or
-    <i><u>noise</u></i> patterns.
+    <p>
+      The fill of the pattern can be either
+      <i>solid</i> colours or
+      <i>noise</i> patterns.
+    </p>
 
 
     <div class="container">
       <div class="image">
-        <img src="./Images/Creation/circle.png" alt="Circle Mondrain with Solid Fill"
+        <img src="./Images/Creation/circle.png" alt="Circle Mondrian with Solid Fill"
           style="width: 128px; height: 128px" />
         <figcaption>
           <i>Fig.2a - Circle Mondrian Pattern with Solid Fill</i>
@@ -148,19 +112,19 @@
       <div class="content">
         <h4>1.1.1.3. Pattern Colour</h4>
         <p>
-          The <i><u>Solid filled pattern</u></i> can be either in
-          <i><u>grayscale</u></i> or in <i><u>RGB</u></i> colour.
+          The <i>Solid filled pattern</i> can be either in
+          <i>grayscale</i> or in <i>RGB</i> colour.
         </p>
 
         <p>
-          For the <i><u>grayscale</u></i> filled pattern, there are 6 different luminance
-          levels used (0; 0.2; 0.4; 0.6; 0.8; 1.0) before RMS contrast & mean
+          For the <i>grayscale</i> filled pattern, there are 6 different luminance
+          levels (0; 0.2; 0.4; 0.6; 0.8; 1.0) used before RMS contrast & mean
           luminance adjustment.
         </p>
 
         <p>
-          For <i><u>RGB</u></i> colour filled pattern, there are 5 different
-          colors ([0 0 0], [1 0 0], [0 1 0], [0 0 1], and [1 1 0]) used before RMS
+          For <i>RGB</i> colour filled patterns, there are 5 different
+          colours ([0 0 0], [1 0 0], [0 1 0], [0 0 1], and [1 1 0]) used before RMS
           contrast & mean luminance adjustment.
         </p>
       </div>
@@ -186,7 +150,7 @@
       <div class="content">
         <h4>1.1.1.4. Pattern Noise Type</h4>
         <p>
-          <i><u>Noise filled pattern</u></i> will be grayscaled <i><u>White Noise</u></i> or <i><u>Pink Noise.</u></i>
+          <i>Noise filled patterns</i> will be grayscaled <i>White Noise</i> or <i>Pink Noise.</i>
         </p>
         </p>
       </div>
@@ -211,7 +175,7 @@
 
     <h4>1.1.2: Traced Items</h4>
     <p>
-      The user can also trace up to 5 different faces/objects and create mondrian
+      The user can also trace up to 5 different faces/objects and create Mondrian
       patterns from these traced items. <b>CFS-Crafter</b> allows users to trace up to 5 different objects/faces to
       create a
       stimulus sequence. <a href="./Trace.html">Click here for help on item tracing.</a>
@@ -248,7 +212,7 @@
       </div>
 
       <div class="content">
-        <p> <i><u>White Noise</u></i> consists of random intensities between 0 and 1 across all pixels before RMS contrast &
+        <p> <i>White Noise</i> consists of random intensities between 0 and 1 across all pixels before RMS contrast &
           mean luminance
           adjustments, which leads to roughly constant power spectral density (PSD) across all frequencies.</p>
       </div>
@@ -263,7 +227,7 @@
         </figcaption>
       </div>
       <div class="content">
-        <p><i><u>Pink Noise</u></i> has PSD inversely proportional to the frequency. which closely resembles
+        <p><i>Pink Noise</i> has a PSD inversely proportional to the frequency, which closely resembles
           a
           natural scene.</p>
       </div>
@@ -280,25 +244,25 @@
 
     <h3 id="Mask Update Rate">2.2. Mask Update Rate & Mask Sequence Duration:</h3>
     <p>
-      The <i><u>Mask Update Rate</u></i> is the rate at which the images is updated in the
+      The <i>Mask Update Rate</i> is the rate at which the images are updated in the
       stimulus sequence.
     </p>
 
-    <p>Notice <i><u>Mask Update Rate</u></i> is not the same as <i><u>Temporal Frequency</u></i>, even through they both
+    <p>Notice that <i>Mask Update Rate</i> is not the same as <i>Temporal Frequency</i>, even though they are both
       in the unit of Hertz. <a href="./Modification.html#Temporal Filtering">Click here for details on <i>Temporal
           Frequency</i> and means to manipulate it.</a>
     </p>
 
-    <p><i><u>Mask Sequence Duration</u></i> is the duration of the created CFS mask stimulus with unit of second. Notice
-      the duration input here should be relative short (a few seconds at most), since the increase in duration & frames
-      will drastically increase the size of the stimuli array & the processing speed. If the experiment design requires
-      long suppression time, consider looping through one or multiple short sequences created by <b>CFS-Crafter</b>.
+    <p><i>Mask Sequence Duration</i> is the duration of the created CFS mask stimulus with unit of second. Notice
+      the duration input here should be relatively short (a few seconds at most), since the increase in duration & frames
+      will drastically increase the size of the stimuli array & the processing speed. If the experimental design requires
+      a long suppression time, consider looping through one or multiple short sequences created by <b>CFS-Crafter</b>.
     </p>
 
     <h3 id="RMS Contrast & Mean Luminance">2.3. RMS Contrast & Mean Luminance:</h3>
 
-    <p>The <i><u>Root-Mean-Square (RMS) Contrast</u></i> of an image is the average standard
-      deviation of the intensity of each pixel. For RGB-colored stimuli each frame
+    <p>The <i>Root-Mean-Square (RMS) Contrast</i> of an image is the average standard
+      deviation of the intensity of each pixel. For RGB-colored stimuli, each frame
       is first converted to grayscale and then the RMS contrast is
       calculated. Here the RMS contrast entered is the target average RMS
       contrast for the entire stimulus sequence.
@@ -313,15 +277,15 @@
     <h4 id="Clipping">2.2.1. Image Clipping</h4>
     <p>The figure below shows cross-sections of the same Mondrian patterned masks with different levels of RMS contrast
       and
-      mean luminance setting. As what we see here, when the target RMS contrast is large, or when the target mean
+      mean luminance setting. As seen here, when the target RMS contrast is large, or when the target mean
       luminance is very extreme, or both at the same time, part of the pixels will have intensity fall outside of the
       [0,1] range, in
       order
       to present the stimuli, these pixels must have their intensity clipped back to 0 or 1. This process is called
-      <i><u>clipping</u></i> of the image. And clipping of the image will result in the actual RMS Contrast & luminance
+      <i>clipping</i> of the image. Clipping of the image will result in the actual RMS Contrast & luminance
       of the stimuli being
       different
-      from the user's setting.
+      from the user's settings.
     </p>
 
 

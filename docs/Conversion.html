@@ -7,64 +7,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Conversion</title>
 
-    <style>
-      h1 {
-        margin: 25px;
-        text-align: center;
-      }
-
-      .container {
-        padding: 10px;
-        gap: 10px;
-        display: flex;
-        justify-content: flex-start;
-        align-items: center;
-      }
-
-      .image {
-        width: 128px;
-      }
-
-      .arrow {
-        width: 64px;
-      }
-
-      img {
-        max-width: 100%;
-        max-height: 100%;
-      }
-
-      /*
-      .content {
-      }
-      */
-
-      img {
-        width: 128px;
-      }
-
-
-      figcaption {
-        font-size: small;
-      }
-
-      p.title {
-        font-weight: bold;
-      }
-
-    </style>
+    
+    <link rel="stylesheet" href="./style.css" />
   </head>
 
-  <body>
-    <a href="./index.html">Homepage</a>
+  <body class="conversion-page">
+    <a class="nav-btn" href="./index.html">Homepage</a>
     <h1>Image Conversion</h1>
     <p>
       The <b>Conversion</b> function allows users to convert a series of images
-      into a <i><u>CFS-Crafter-Mask</u></i>. After conversion, users can modify
+      into a <i>CFS-Crafter-Mask</i>. After conversion, users can modify
       this sequence with the
       <a href="./Modification.html">Modification function</a>, or compare it
-      with other <i><u>CFS-Crafter-Masks</u></i> or <i><u>images</u></i> using the
-      <a href="./Analysis.html">Analysis function</a>.
+      with other <i>CFS-Crafter-Masks</i> or <i>images</i> using the
+      <a class="nav-btn" href="./Analysis.html">Analysis function</a>.
     </p>
 
     <div class="container">
@@ -93,7 +49,7 @@
       Clicking the Add Images button allows users to select multiple images to upload to <b>CFS-Crafter</b>. The order
       of the images is based on
       the naming of the image files. Additionally, users can delete unwanted images
-      by checking the <i><u>selection</u></i> column and clicking the <i><u>Delete Selection</u></i> button.
+      by checking the <i>selection</i> column and clicking the <i>Delete Selection</i> button.
     </p>
 
 
@@ -105,25 +61,27 @@
     </p>
 
     <h3>2.1. Stimuli Height & Stimuli Width</h3>
-    First, set the size of the output stimuli in pixels. All uploaded images will be resized to
-    these
-    dimensions. <b>CFS-Crafter</b> allows images of different sizes to be uploaded, but note that resizing might
-    lead to changes in the aspect ratio. Hence, it is recommended to crop the images beforehand to the same aspect ratio.
+    <p>
+      First, set the size of the output stimuli in pixels. All uploaded images will be resized to
+      these
+      dimensions. <b>CFS-Crafter</b> allows images of different sizes to be uploaded, but note that resizing might
+      lead to changes in the aspect ratio. Hence, it is recommended to crop the images beforehand to the same aspect ratio.
+    </p>
 
     <h3>2.2. Image Update Rate & Stimuli Duration</h3>
     <p>
-      The <i><u>Image Update Rate</u></i> is the rate at which the images are updated in the
-      stimulus sequence, similar to the <i><u>Mask Update Rate</u></i> in <b>Creation</b>. <a
+      The <i>Image Update Rate</i> is the rate at which the images are updated in the
+      stimulus sequence, similar to the <i>Mask Update Rate</i> in <b>Creation</b>. <a
         href="./Creation.html#Mask Update Rate">Click here for more details.</a>
     </p>
     <p>After entering the image update rate, CFS-Crafter
       will calculate the duration of the stimulus sequence based on it and
-      the number of selected images, which will then be shown in <i><u>stimuli duration</u></i>.</p>
+      the number of selected images, which will then be shown in <i>stimuli duration</i>.</p>
 
     <h3>2.3. RMS Contrast & Mean Luminance</h3>
     <p>
       Similar to creation, conversion also allows the user to set the target
-      <i><u>RMS contrast</u></i> and <i><u>mean luminace</u></i> value. <a
+      <i>RMS contrast</i> and <i>mean luminance</i> value. <a
         href="./Creation.html#RMS Contrast & Mean Luminance">Click
         here for
         details.</a>
