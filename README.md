@@ -8,13 +8,61 @@ Wang, G., Alais, D., Blake, R. et al. CFS-crafter: An open-source tool for creat
 ---
 
 ## Table of Contents
+- [Examples Library](#examples-library)
 - [1. Screen Information](#1-screen-information)
 - [2. Choose Function](#2-choose-function)
   - [2.1. Creation](https://guandongwang.github.io/cfs_crafter/Creation.html)
   - [2.2. Conversion](https://guandongwang.github.io/cfs_crafter/Conversion.html)
   - [2.3. Modification](https://guandongwang.github.io/cfs_crafter/Modification.html)
   - [2.4. Analysis](https://guandongwang.github.io/cfs_crafter/Analysis.html)
-- [3. Examples Library](#3-examples-library)
+
+---
+
+## Examples Library
+
+### Animated Examples
+<table align="center">
+  <tr>
+    <td align="center"><img src="./docs/Images/Creation/gray_mondrain.gif" width="200"><br><b>Grayscale Mondrian</b></td>
+    <td align="center"><img src="./docs/Images/Creation/traced_items/face.gif" width="200"><br><b>Traced Face Pattern</b></td>
+    <td align="center"><img src="./docs/Images/Creation/traced_items/object.gif" width="200"><br><b>Traced Object Pattern</b></td>
+    <td align="center"><img src="./docs/Images/Conversion/image_sequence.gif" width="200"><br><b>Image Sequence</b></td>
+  </tr>
+  <tr>
+    <td align="center"><img src="./docs/Images/Modification/before_temporal_filtering.gif" width="200"><br><b>Before Filtering</b></td>
+    <td align="center"><img src="./docs/Images/Modification/after_termporal_filtering.gif" width="200"><br><b>Temporal Filtering</b></td>
+    <td align="center"><img src="./docs/Images/Modification/after_bandpass_termporal_filtering.gif" width="200"><br><b>Bandpass Temporal</b></td>
+    <td align="center"><img src="./docs/Images/Modification/after_high_pass_termporal_filtering.gif" width="200"><br><b>High-Pass Temporal</b></td>
+  </tr>
+</table>
+
+### Static Examples
+<table align="center">
+  <tr>
+    <td align="center"><img src="./docs/Images/Creation/circle.png" width="200"><br><b>Circle Mondrian</b></td>
+    <td align="center"><img src="./docs/Images/Creation/square.png" width="200"><br><b>Square Mondrian</b></td>
+    <td align="center"><img src="./docs/Images/Creation/diamond.png" width="200"><br><b>Diamond Mondrian</b></td>
+    <td align="center"><img src="./docs/Images/Creation/circle_rgb.png" width="200"><br><b>RGB Mondrian</b></td>
+  </tr>
+  <tr>
+    <td align="center"><img src="./docs/Images/Creation/square_white_noise.png" width="200"><br><b>White Noise Fill</b></td>
+    <td align="center"><img src="./docs/Images/Creation/circle_pink_noise.png" width="200"><br><b>Pink Noise Fill</b></td>
+    <td align="center"><img src="./docs/Images/Creation/white_noise.png" width="200"><br><b>White Noise Mask</b></td>
+    <td align="center"><img src="./docs/Images/Creation/pink_noise.png" width="200"><br><b>Pink Noise Mask</b></td>
+  </tr>
+  <tr>
+    <td align="center"><img src="./docs/Images/Modification/full_freq_scramble.png" width="200"><br><b>Full Freq Scramble</b></td>
+    <td align="center"><img src="./docs/Images/Modification/full_freq_partial_scramble.png" width="200"><br><b>Partial Scramble</b></td>
+    <td align="center"><img src="./docs/Images/Modification/high_freq_scramble.png" width="200"><br><b>High Freq Scramble</b></td>
+    <td align="center"><img src="./docs/Images/Modification/low_freq_scramble.png" width="200"><br><b>Low Freq Scramble</b></td>
+  </tr>
+  <tr>
+    <td align="center"><img src="./docs/Images/Modification/bandpass_scramble.png" width="200"><br><b>Bandpass Scramble</b></td>
+    <td align="center"><img src="./docs/Images/Modification/ori_filtered.png" width="200"><br><b>Orientation Filtered</b></td>
+    <td align="center"><img src="./docs/Images/Analysis/edge_detection.png" width="200"><br><b>Edge Detection</b></td>
+    <td align="center"></td>
+  </tr>
+</table>
 
 ---
 
@@ -78,56 +126,4 @@ The **Analysis** function provides tools for analyzing and comparing descriptive
 
   <img src="./docs/Images/Analysis/edge_detection.png" width="250" height="250">  
 
-  Details about edge detection in **Analysis**.  
-
----
-
-## 3. Examples Library
-
-### Animated Examples
-<table align="center">
-  <tr>
-    <td align="center"><img src="./docs/Images/Creation/gray_mondrain.gif" width="200"><br><b>Grayscale Mondrian</b></td>
-    <td align="center"><img src="./docs/Images/Creation/traced_items/face.gif" width="200"><br><b>Traced Face Pattern</b></td>
-    <td align="center"><img src="./docs/Images/Creation/traced_items/object.gif" width="200"><br><b>Traced Object Pattern</b></td>
-    <td align="center"><img src="./docs/Images/Conversion/image_sequence.gif" width="200"><br><b>Image Sequence</b></td>
-  </tr>
-  <tr>
-    <td align="center"><img src="./docs/Images/Modification/before_temporal_filtering.gif" width="200"><br><b>Before Filtering</b></td>
-    <td align="center"><img src="./docs/Images/Modification/after_termporal_filtering.gif" width="200"><br><b>Temporal Filtering</b></td>
-    <td align="center"><img src="./docs/Images/Modification/after_bandpass_termporal_filtering.gif" width="200"><br><b>Bandpass Temporal</b></td>
-    <td align="center"><img src="./docs/Images/Modification/after_high_pass_termporal_filtering.gif" width="200"><br><b>High-Pass Temporal</b></td>
-  </tr>
-</table>
-
-### Static Mask Patterns
-<table align="center">
-  <tr>
-    <td align="center"><img src="./docs/Images/Creation/circle.png" width="200"><br><b>Circle Mondrian</b></td>
-    <td align="center"><img src="./docs/Images/Creation/square.png" width="200"><br><b>Square Mondrian</b></td>
-    <td align="center"><img src="./docs/Images/Creation/diamond.png" width="200"><br><b>Diamond Mondrian</b></td>
-    <td align="center"><img src="./docs/Images/Creation/circle_rgb.png" width="200"><br><b>RGB Mondrian</b></td>
-  </tr>
-  <tr>
-    <td align="center"><img src="./docs/Images/Creation/square_white_noise.png" width="200"><br><b>White Noise Fill</b></td>
-    <td align="center"><img src="./docs/Images/Creation/circle_pink_noise.png" width="200"><br><b>Pink Noise Fill</b></td>
-    <td align="center"><img src="./docs/Images/Creation/white_noise.png" width="200"><br><b>White Noise Mask</b></td>
-    <td align="center"><img src="./docs/Images/Creation/pink_noise.png" width="200"><br><b>Pink Noise Mask</b></td>
-  </tr>
-</table>
-
-### Modification & Analysis
-<table align="center">
-  <tr>
-    <td align="center"><img src="./docs/Images/Modification/full_freq_scramble.png" width="200"><br><b>Full Freq Scramble</b></td>
-    <td align="center"><img src="./docs/Images/Modification/full_freq_partial_scramble.png" width="200"><br><b>Partial Scramble</b></td>
-    <td align="center"><img src="./docs/Images/Modification/high_freq_scramble.png" width="200"><br><b>High Freq Scramble</b></td>
-    <td align="center"><img src="./docs/Images/Modification/low_freq_scramble.png" width="200"><br><b>Low Freq Scramble</b></td>
-  </tr>
-  <tr>
-    <td align="center"><img src="./docs/Images/Modification/bandpass_scramble.png" width="200"><br><b>Bandpass Scramble</b></td>
-    <td align="center"><img src="./docs/Images/Modification/ori_filtered.png" width="200"><br><b>Orientation Filtered</b></td>
-    <td align="center"><img src="./docs/Images/Analysis/edge_detection.png" width="200"><br><b>Edge Detection</b></td>
-    <td align="center"></td>
-  </tr>
-</table>
+  Details about edge detection in **Analysis**.
