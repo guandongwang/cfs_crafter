@@ -1,6 +1,8 @@
 # CFS-Crafter Citation
 Wang, G., Alais, D., Blake, R. et al. CFS-crafter: An open-source tool for creating and analyzing images for continuous flash suppression experiments. Behav Res (2022). https://doi.org/10.3758/s13428-022-01903-7
 
+**Online Documentation:** [https://guandongwang.github.io/cfs_crafter/](https://guandongwang.github.io/cfs_crafter/)
+
 # CFS-Crafter Help Information  
 
 **CFS-Crafter** is an open-source MATLAB application designed for precise control, manipulation, and analysis of CFS stimuli. The application does not require prior expertise in image processing and analysis, making it an accessible tool for improving stimulus control, enhancing comprehension of CFS findings, and generating more effective CFS animations.  
