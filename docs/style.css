@@ -225,19 +225,19 @@ code {
 /* Page-specific overrides via body classes */
 
 /* Trace page has larger images */
-body.trace-page .image {
+.trace-page .image {
   width: 256px;
 }
 
 /* Analysis graphs layout */
-body.analysis-page .graph {
+.analysis-page .graph {
   height: auto;
   width: auto;
   max-width: 280px;
 }
 
 /* Modification page graphs are wider */
-body.modification-page .graph {
+.modification-page .graph {
   width: 100%;
   max-width: 440px;
 }
